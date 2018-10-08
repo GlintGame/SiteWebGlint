@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page not found</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(238, 215, 141);
+
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: 'Raleway', sans-serif;
+        }
+
+        h1{
+            font-size: 5rem;
+        }
+
+        canvas{
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <canvas id="flickering-light"></canvas>
+
+    <h1>404 : Page not found</h1>
+
+    <script src="../node_modules/noisejs/index.js"></script>
+    <script src="404.js"></script>
+</body>
+</html>
