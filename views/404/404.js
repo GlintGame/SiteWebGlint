@@ -3,20 +3,15 @@ class LightCanvas
 {
     constructor()
     {
-        this.mouse = { x: undefined, y: undefined }
-        this.dimentions = { w: undefined, h: undefined }        
-
         this.canvas = document.querySelector('#flickering-light');
         this.ctx = this.canvas.getContext("2d");
 
-        // make sure the canvas is the size of the screen
-        this.setCanvasDimentions();
-        window.addEventListener("resize", this.setCanvasDimentions);
-
         // get mouse position data
+        this.mouse = { x: undefined, y: undefined }     
         window.addEventListener('mousemove', e => {
             this.mouse.x = e.clientX;
             this.mouse.y = e.clientY;
+            this.canvas.style.maskPosition = `${this.mouse.x - 1920}px ${this.mouse.y - 1080}px`;
         });
 
         // initialize noise
@@ -24,46 +19,43 @@ class LightCanvas
         this.noise.seed(Math.random());
         this.time = 0;
 
+        // make sure the canvas is the size of the screen
+        this.setCanvasDimentions();
+        window.addEventListener("resize", this.setCanvasDimentions.bind(this));
+
+        // start animating
         this.update();
     }
 
-    setCanvasDimentions() {
+    setCanvasDimentions() 
+    {
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
-
-        this.dimentions.w = window.innerWidth;
-        this.dimentions.h = window.innerHeight;
+        this.imgData = this.ctx.createImageData(this.canvas.width,this.canvas.height);
     }
 
-    update() {
-        let imgData = this.createNoiseImage();
-        this.ctx.putImageData(imgData, 0, 0);
-
+    // called on each frames
+    update() 
+    {
+        this.createNoiseImage();
         requestAnimationFrame(this.update.bind(this));
     }
 
-    createNoiseImage() {
-        
-        let imgData = this.ctx.createImageData(this.dimentions.w, this.dimentions.h);
-        let data = imgData.data;
-
-        for(let y = 0; y < this.dimentions.h; y++){
-            for(let x = 0; x < this.dimentions.w; x++){
-
-                let value = Math.abs(this.noise.perlin3(x /150, y/150, this.time)) * 5;
-
-                let diffPointMouse = Math.sqrt(Math.pow(this.mouse.x - x, 2) + Math.pow(this.mouse.y - y, 2));
-
-                let cell = (x + y * this.dimentions.w) * 4;
-                data[cell] = data[cell + 1] = data[cell + 2] = value; // rgb chanel
-                data[cell + 3] = Math.sqrt(diffPointMouse * 120) + 70; // alpha chanel
-
+    createNoiseImage() 
+    {
+        for(let y = 0; y <this.canvas.height; y++)
+        {
+            for(let x = 0; x < this.canvas.width; x++)
+            {
+                let value = Math.abs(this.noise.perlin3(x /150, y/150, this.time)) * 20;
+                let cell = (x + y * this.canvas.width) * 4;
+                this.imgData.data[cell] = this.imgData.data[cell + 1] = this.imgData.data[cell + 2] = value; // rgb chanel
+                this.imgData.data[cell + 3] = 255; // base alpha
             }
         }
-        this.time += 0.03;
-        return imgData;
+        this.time += 0.01;
+        this.ctx.putImageData(this.imgData, 0, 0);
     }
-
 }
 
 const light = new LightCanvas();
