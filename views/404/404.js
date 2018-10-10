@@ -11,7 +11,9 @@ class LightCanvas
         window.addEventListener('mousemove', e => {
             this.mouse.x = e.clientX;
             this.mouse.y = e.clientY;
-            this.canvas.style.maskPosition = `${this.mouse.x - 1920}px ${this.mouse.y - 1080}px`;
+            this.canvas.style.setProperty('--x-light',`${this.mouse.x - 1920}px`);
+            this.canvas.style.setProperty('--y-light',`${this.mouse.y - 1080}px`);
+            // this.canvas.style.maskPosition = `${this.mouse.x - 1920}px ${this.mouse.y - 1080}px`;
         });
 
         // initialize noise

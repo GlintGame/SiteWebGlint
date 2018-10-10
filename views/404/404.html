@@ -27,6 +27,9 @@
         }
 
         canvas{
+            --x-light: 0;
+            --y-light: 0;
+
             position: absolute;
             z-index: 1;
             top: 0;
@@ -35,6 +38,11 @@
             mask: url(light.png);
             mask-mode: alpha;
             mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+
+            mask-position: var(--x-light) var(--y-light);
+            -webkit-mask-position-x: var(--x-light);
+            -webkit-mask-position-y: var(--y-light);
         }
         
     </style>
