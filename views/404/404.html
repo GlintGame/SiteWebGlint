@@ -20,39 +20,29 @@
             align-items: center;
 
             font-family: 'Raleway', sans-serif;
+
+            overflow: hidden;
         }
 
         h1{
             font-size: 5rem;
         }
-
-        canvas{
+        
+        img{
             --x-light: 0;
             --y-light: 0;
 
             position: absolute;
-            z-index: 1;
-            top: 0;
-            left: 0;
-
-            mask: url(light.png);
-            mask-mode: alpha;
-            mask-repeat: no-repeat;
-            -webkit-mask-repeat: no-repeat;
-
-            mask-position: var(--x-light) var(--y-light);
-            -webkit-mask-position-x: var(--x-light);
-            -webkit-mask-position-y: var(--y-light);
+            top: var(--y-light);
+            left: var(--x-light);
         }
         
     </style>
 </head>
 <body>
-    <canvas id="flickering-light"></canvas>
-
+    <img src="light.png" alt="">
     <h1>404 : Page not found</h1>
 
-    <script src="../node_modules/noisejs/index.js"></script>
     <script src="404.js"></script>
 </body>
 </html>
