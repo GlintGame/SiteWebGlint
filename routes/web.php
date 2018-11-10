@@ -11,4 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@home');
+Route::get('/{version}', 'HomeController@version')->name('version');
+Route::post('/{version}', 'HomeController@addPost')->name('post');
+
+Route::controller('/login', 'UserAuthController');
