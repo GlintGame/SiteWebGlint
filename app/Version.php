@@ -12,7 +12,7 @@ class Version extends Model
      *
      * @var array
      */
-    protected $fillable = ['version_name', 'url_win', 'url_mac', 'url_lin'];
+    protected $fillable = ['name', 'url'];
     
     public function posts()
     {

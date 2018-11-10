@@ -35,6 +35,9 @@
             position: absolute;
             top: var(--y-light);
             left: var(--x-light);
+
+            width: 6720px;
+            height: 3780px;
         }
         
     </style>
@@ -43,6 +46,13 @@
     <img src="img/light.png" alt="">
     <h1>{{ $message }}</h1>
 
-    <script src="js/generated/404.js"></script>
+    <script>
+        const img = document.querySelector('img');
+        
+        window.addEventListener('mousemove', (e) => {
+            img.style.setProperty('--x-light',`${e.clientX - img.width/2}px`);
+            img.style.setProperty('--y-light',`${e.clientY - img.height/2}px`);
+        });
+    </script>
 </body>
 </html>

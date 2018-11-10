@@ -15,10 +15,8 @@ class CreateVersionsTable extends Migration
     {
         Schema::create('versions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('version_name');
-            $table->string('url_win');
-            $table->string('url_mac');
-            $table->string('url_lin');
+            $table->string('name');
+            $table->string('url');
             $table->timestamps();
         });
     }

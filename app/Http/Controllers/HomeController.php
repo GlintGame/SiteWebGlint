@@ -5,18 +5,28 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use App\Version;
 
 class HomeController extends Controller
 {
 
     // give a specific version of the game
-    public function version(string $version)
+    public function version(string $version = null)
     {
-        if(isset($version))
+        if($version == null)
         {
-            return view('welcome');
+            $data = Version::orderBy('created_at')->first();
         }
-        return view('error', ['message' => 'Work In Progress']);
+        else 
+        {
+            $data = Version::where('name', $version)->first();
+        }
+        
+        if($data == null)
+        {
+            return view('error', ['message' => '404 : cette version du jeu n\'existe pas']);
+        }
+        return view('version', ['version' => $data]);
     }
 
     public function addPost(Request $request)
@@ -24,29 +34,23 @@ class HomeController extends Controller
 
         $content = $request->input('content');
 
-        if(Auth::check())
+        $user = Anonymuser::where('ip', $request->ip());
+        if($user == null)
         {
-            
-        }
-        else
+            $user = Anonymuser::create(['ip' => $request->ip(), 'last_post' => Carbon::now()->timestamp]);
+        } 
+        else 
         {
-            $user = Anonymuser::where('ip', $request->ip());
-            if($user == null)
+            $last_post = new Carbon($user->last_post);
+            if($last_post->diffInMinutes(Carbon::now()) < 5) 
             {
-                $user = Anonymuser::create(['ip' => $request->ip(), 'last_post' => Carbon::now()->timestamp]);
-            } else {
-                $last_post = new Carbon($user->last_post);
-                if($last_post->diffInMinutes(Carbon::now()) < 5) {
-                    // user cant post right now
-                } else {
-                    $user->last_post = Carbon::now()->timestamp;
-                    $user->save();
-                }
+                view('error');
+            } 
+            else 
+            {
+                $user->last_post = Carbon::now()->timestamp;
+                $user->save();
             }
-            
-            
-            // here user can post 
-
         }
     }
 }
