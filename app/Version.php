@@ -18,4 +18,24 @@ class Version extends Model
     {
         return $this->hasMany('App\Post');
     }
+
+
+    /**
+     * Give the version witch has this name, or the latest
+     *
+     * @param string the name of the version
+     */
+    public static function getNamedOrLatest($name = null) 
+    {
+        if($name == null)
+        {
+            $version = static::orderBy('created_at')->first();
+        }
+        else 
+        {
+            $version = static::where('name', $name)->first();
+        }
+
+        return $version;
+    }
 }

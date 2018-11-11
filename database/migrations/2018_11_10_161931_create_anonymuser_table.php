@@ -13,7 +13,7 @@ class CreateAnonymuserTable extends Migration
      */
     public function up()
     {
-        Schema::create('anonymuser', function (Blueprint $table) {
+        Schema::create('anonymusers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('ip', '20');
             $table->timestamp('last_post');
@@ -28,6 +28,6 @@ class CreateAnonymuserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('anonymuser');
+        Schema::dropIfExists('anonymusers');
     }
 }

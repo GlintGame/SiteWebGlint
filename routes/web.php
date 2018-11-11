@@ -12,13 +12,4 @@
 */
 
 Route::get('/{version?}', 'HomeController@version')->name('version');
-Route::post('/{version?}', 'HomeController@addPost')->name('post');
-
-/*
-Route::group(['prefix' => 'login'], function () {
-   Route::get('/', 'UserAuthController@login');
-   Route::get('/register', 'UserAuthController@login');
-   Route::get('/forgot_password', 'UserAuthController@forgot_password');
-   Route::get('/validate', 'UserAuthController@validate');
-});
-*/
+Route::post('/{version?}', 'PostController@add')->name('addPost');
