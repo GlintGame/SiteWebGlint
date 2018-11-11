@@ -17,6 +17,7 @@ class CreateVersionsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('url');
+            $table->longText('change_log');
             $table->timestamps();
         });
     }

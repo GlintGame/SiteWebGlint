@@ -13,7 +13,7 @@ class PostController extends Controller
 
     public function add($versionName, Request $request)
     {
-        $version = Version::getNamedOrLatest($versionName);
+        $version =  Version::where('name', $versionName)->first();
         if($version == null)
         {
             return view('error', ['message' => '404 : cette version du jeu n\'existe pas']);

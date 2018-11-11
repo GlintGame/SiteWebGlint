@@ -11,5 +11,6 @@
 |
 */
 
-Route::get('/{version?}', 'HomeController@version')->name('version');
-Route::post('/{version?}', 'PostController@add')->name('addPost');
+Route::get('/', 'HomeController@home')->name('home');
+Route::get('/{version}', 'HomeController@version')->name('version');
+Route::post('/{version}', 'PostController@add')->name('addPost');

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <title>Version du jeu</title>
 </head>
 <body>
+    <a href="{{ route('home') }}">retour à la homepage</a>
     <h1>{{ $version->name }}</h1>
     <h3>id : {{ $version->id }}</h3>
     <p>
+        {{ $version->change_log }} <br>
         <a href="{{ $version->url }}">{{ $version->url }}</a>
     </p>
 
