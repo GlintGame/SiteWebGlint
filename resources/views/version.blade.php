@@ -21,13 +21,25 @@
     <form action="{{ route('addPost', ['version' => $version->name]) }}" method="POST">
 
         @csrf
-        <input type="text" name="content">
+        <label>
+            nom : <br>
+            <input type="text" name="given_name"> 
+        </label>
+        <br>
+        <label>
+            votre message : <br>
+            <textarea name="content"></textarea> 
+        </label>
+        <br>
         <input type="submit" value="post">
 
     </form>
 
     @foreach ($version->posts as $post)
-        <h3>{{ ($post->user == null) ? 'une loupiote anonyme' : $post->user }}</h3>
+        <h3>
+            {{ $post->given_name }}
+            <em>{{ ($post->user == null) ? '(une loupiote anonyme)' : $post->user }}</em>
+        </h3>
         <p>
             {{ $post->content }}
         </p>

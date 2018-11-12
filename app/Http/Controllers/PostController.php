@@ -13,13 +13,14 @@ class PostController extends Controller
 
     public function add($versionName, Request $request)
     {
-        $version =  Version::where('name', $versionName)->first();
+        $version = Version::where('name', $versionName)->first();
         if($version == null)
         {
             return view('error', ['message' => '404 : cette version du jeu n\'existe pas']);
         }
 
         $content = $request->input('content');
+        $givenName = $request->input('given_name');
 
         $user = Anonymuser::where('ip', $request->ip())->first();
         if($user == null)
@@ -47,7 +48,8 @@ class PostController extends Controller
         Post::create([
             'content'       => $content,
             'anonymuser_id' => $user->id,
-            'version_id'    => $version->id
+            'version_id'    => $version->id,
+            'given_name'    => $givenName
         ]);
 
         return redirect()->route('version', ['version' => $versionName]);;

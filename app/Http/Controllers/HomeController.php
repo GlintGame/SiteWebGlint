@@ -19,7 +19,7 @@ class HomeController extends Controller
     // give a specific version of the game
     public function version(string $versionName)
     {
-        $version =  Version::where('name', $versionName)->first();
+        $version =  Version::where('name', $versionName)->with('posts')->first();
 
         if($version == null)
         {

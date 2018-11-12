@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->integer('user_id')->unsigned()->index()->nullable();
             $table->integer('anonymuser_id')->unsigned()->index()->nullable();
             $table->integer('version_id')->unsigned()->index()->nullable();
+            $table->string('given_name');
             $table->timestamps();
         });
     }
