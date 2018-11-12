@@ -13,5 +13,5 @@ const mix = require('laravel-mix');
 const js_dir = 'public/js/generated'
 const css_dir = 'public/css'
 
-mix.js('resources/js/app.js', js_dir)
-   .sass('resources/sass/app.scss', css_dir);
+mix.sass('resources/sass/home.scss', css_dir)
+   .sass('resources/sass/version.scss', css_dir);
