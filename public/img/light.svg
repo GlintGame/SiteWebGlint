@@ -1,0 +1,16 @@
+<svg id="f6b82006-560d-4556-9dae-a98a0470446a" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3840 2160">
+  <defs>
+    <style>
+      .b73c8cba-c8c9-4f05-9f35-5fe60d030922 {
+        fill: url(#946acdcd-41d5-42f5-9e1c-6be4fdddef12);
+      }
+    </style>
+    <radialGradient id="946acdcd-41d5-42f5-9e1c-6be4fdddef12" data-name="Dégradé sans nom 72" cx="1920" cy="1080" r="1557.6906" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0"/>
+      <stop offset="0.0924" stop-opacity="0.4"/>
+      <stop offset="0.19948" stop-opacity="0.95"/>
+    </radialGradient>
+  </defs>
+  <title>light</title>
+  <rect class="b73c8cba-c8c9-4f05-9f35-5fe60d030922" width="3840" height="2160"/>
+</svg>
