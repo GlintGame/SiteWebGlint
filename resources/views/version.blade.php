@@ -66,7 +66,7 @@ Ecrivez ici !"  name="content" id="post_content" ></textarea>
 
             </form>
 
-            @foreach ($version->posts as $post)
+            @foreach ($posts as $post)
 
             <div class="com">
                 <h3>
@@ -74,7 +74,7 @@ Ecrivez ici !"  name="content" id="post_content" ></textarea>
                     <em>{{ ($post->user == null) ? '(une loupiote anonyme)' : $post->user }}</em>
                 </h3>
                 <p>
-                    {{ $post->content }}
+                    {!! nl2br(e($post->content)) !!}
                 </p>
             </div>
 
