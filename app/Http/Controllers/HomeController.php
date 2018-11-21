@@ -23,7 +23,7 @@ class HomeController extends Controller
 
         if($version == null)
         {
-            return view('error', ['message' => '404 : cette version du jeu n\'existe pas']);
+            return view('error', ['message' => 'Cette version du jeu n\'existe pas', 'background' => '404']);
         }
 
         return view('version', ['version' => $version]);
