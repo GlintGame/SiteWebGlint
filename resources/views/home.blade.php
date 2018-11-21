@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> 
     <title>Glint</title>
 </head>
 
@@ -34,7 +35,7 @@
 
     <section id="galery">
             <h2>Galerie</h2>
-        <div>
+        <div class="contente">
             <img src="img/galery/placeholder.png" alt="placeholder">
             <img src="img/galery/placeholder.png" alt="placeholder">
             <img src="img/galery/placeholder.png" alt="placeholder">
@@ -42,17 +43,27 @@
             <img src="img/galery/placeholder.png" alt="placeholder">
             <img src="img/galery/placeholder.png" alt="placeholder">
         </div>
+        <div class="fleche"></div>
     </section>
 
     <section id="telechargement">
-        <p>Vous voulez participer au dévlopement ? ECTTTTTTTTTTTTTT
-            <br>ECTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</p>
-        <a href="{{ $lastVersionRef }}">Télécharger la dernière version disponible !</a>
+        <p>Vous souhaitez participer au dévlopement de glint ? <br>Tester et nous faire des commentaires sur la derrenière version du jeu ?</p>
+        <a href="{{ $lastVersionRef }}">Alors rendez-vous ici pour accéder à la page de téléchargement de glint</a>
     </section>
 
     <footer>
         <p>lien vers les réseaux</p>
     </footer>
+
+    <script>
+        function afficheGallerie() {
+        let e = document.querySelector(".contente");
+        e.classList.toggle("active");
+        }
+        let el = document.querySelector(".fleche");
+        el.addEventListener("click", afficheGallerie);
+    
+    </script>
 
 </body>
 </html>

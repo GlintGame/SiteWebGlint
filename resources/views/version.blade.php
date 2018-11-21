@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> 
     <title>Glint : Téléchargement</title>
 </head>
 
@@ -23,11 +24,13 @@
     </header>
 
     <section id="changelog">
-        <h2>Derniers changements</h2>
-        <p>{{ $version->change_log }}</p>
+        <details>
+            <summary>Derniers changements</summary>
+            <p>{{ $version->change_log }}</p>
+        </details>
     </section>
 
-    
+
     <section id="com">
 
         <div>
@@ -45,37 +48,40 @@
                 <h2>Laisser un avis sur le jeu</h2>
 
                 @if (session('posted') == 'no')
-                    <div style="color: red">
-                        vous avez déja posté il y a moins de 5min, réessayez plus tard
-                    </div>
+                <div style="color: red">
+                    Vous avez déja posté il y a moins de 5min, réessayez plus tard
+                </div>
                 @endif
-        
+
                 <label for="post_name"></label>
                 <input type="text" name="given_name" placeholder="Psodonyme" id="post_name">
-        
-                <label for="post_content"></label>
-                <textarea name="content" id="post_content"></textarea> 
-        
+
+                <label for="post_content">Votre commentaire</label>
+                <textarea placeholder="Vous avez aimé notre jeu ? 
+Vous avez trouvé un bug ?
+Vous voulez recommander quelque chose ? 
+Ecrivez ici !"  name="content" id="post_content" ></textarea>
+
                 <input type="submit" value="Laisser un commentaire">
-        
+
             </form>
 
             @foreach ($version->posts as $post)
 
-                <div class="com">
-                    <h3>
-                        {{ $post->given_name }} 
-                        <em>{{ ($post->user == null) ? '(une loupiote anonyme)' : $post->user }}</em>
-                    </h3>
-                    <p>
-                        {{ $post->content }}
-                    </p>
-                </div>
+            <div class="com">
+                <h3>
+                    {{ $post->given_name }}
+                    <em>{{ ($post->user == null) ? '(une loupiote anonyme)' : $post->user }}</em>
+                </h3>
+                <p>
+                    {{ $post->content }}
+                </p>
+            </div>
 
             @endforeach
 
         </div>
-        
+
 
     </section>
 

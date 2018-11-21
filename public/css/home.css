@@ -7,10 +7,15 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-family: Source Sans Pro,sans-serif;
+}
+
+body {
+  background: #111111;
 }
 
 header {
-  height: 95vh;
+  height: 105vh;
   background: #383838;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,6 +26,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: 0 -175px 140px -30px #111111 inset;
+          box-shadow: 0 -175px 140px -30px #111111 inset;
 }
 
 header div {
@@ -50,13 +57,17 @@ header div h1 {
 
 header div a {
   padding: 10px 50px;
-  background: white;
-  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+header div a:hover {
+  text-decoration: underline;
 }
 
 section#pres {
-  background: -webkit-gradient(linear, left top, left bottom, from(#383838), color-stop(15%, #111111), to(#111111));
-  background: linear-gradient(#383838, #111111 15%, #111111);
+  background: #111111;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,8 +75,9 @@ section#pres {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -85,9 +97,21 @@ section#pres iframe {
 }
 
 section#galery {
-  background: -webkit-gradient(linear, left top, left bottom, from(#111111), color-stop(85%, #111111), to(#777777));
-  background: linear-gradient(#111111, #111111 85%, #777777);
+  background: #111111;
   padding: 5% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section#galery h2 {
@@ -96,7 +120,7 @@ section#galery h2 {
   margin: auto;
 }
 
-section#galery div {
+section#galery div.contente {
   width: 90%;
   max-width: 1920px;
   margin: auto;
@@ -113,15 +137,19 @@ section#galery div {
           align-items: center;
 }
 
-section#galery div img {
+section#galery div.contente img {
   width: 20vw;
   min-width: 320px;
   margin: 2%;
 }
 
 section#telechargement {
-  background: #777777;
+  background-image: url(/images/forest-02.png?cead0a8d20bd4ed3524cbffc8d621ed5);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*background-attachment: fixed;*/
   padding: 15% 0;
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,17 +164,98 @@ section#telechargement {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  -webkit-box-shadow: 0 240px 300px -30px #111111 inset,0 -175px 140px -30px #111111 inset;
+          box-shadow: 0 240px 300px -30px #111111 inset,0 -175px 140px -30px #111111 inset;
+}
+
+section#telechargement p {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 5%;
 }
 
 section#telechargement a {
+  font-size: 1.5rem;
   padding: 10px 50px;
-  background: white;
-  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+section#telechargement a:hover {
+  text-decoration: underline;
 }
 
 footer {
-  background: black;
+  background: #111111;
   color: white;
   padding: 5%;
+}
+
+@media screen and (max-width: 720px) {
+  header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  header div {
+    width: 90%;
+    text-align: center;
+  }
+
+  section#pres iframe {
+    width: 90vw;
+    height: 70vw;
+  }
+
+  section#galery div.contente {
+    overflow: hidden;
+    max-height: 90vh;
+    margin: 40px;
+    -webkit-transition: max-height 1s ease-out;
+    transition: max-height 1s ease-out;
+  }
+
+  section#galery div.contente img {
+    width: 70vw;
+    min-width: 320px;
+    margin: 2%;
+  }
+
+  section#galery div.fleche {
+    width: 40px;
+    height: 40px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    border-right: solid white 4px;
+    border-bottom: solid white 4px;
+    border-radius: 4px;
+    -webkit-transition: -webkit-transform 1s 1s;
+    transition: -webkit-transform 1s 1s;
+    transition: transform 1s 1s;
+    transition: transform 1s 1s, -webkit-transform 1s 1s;
+  }
+
+  section#galery div.fleche:hover {
+    cursor: pointer;
+  }
+
+  section#galery div.contente.active {
+    max-height: 1850px;
+  }
+
+  section#galery div.contente.active + div.fleche {
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  section#galery div.contente.active {
+    max-height: 1850px;
+    -webkit-transition: max-height 1s ease-out;
+    transition: max-height 1s ease-out;
+  }
 }
 
