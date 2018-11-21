@@ -1,0 +1,31 @@
+footer{
+    background: #111111;
+    color: white;
+    padding: 5%;
+    display: flex;
+
+    div.reseaux{
+        width: 50%;
+        
+        img{
+            width: 50px;
+            margin: 10px;
+        }
+
+    }
+    div.groupe{
+        width: 50%;
+        p,H2{
+            text-align: end;
+
+        }
+    }
+    
+}
+@media screen and (max-width: (550px)){
+    footer{
+        div.reseaux{
+            width: 100%;
+        }
+    }
+}

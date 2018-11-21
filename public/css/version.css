@@ -1,3 +1,36 @@
+footer {
+  background: #111111;
+  color: white;
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer div.reseaux {
+  width: 50%;
+}
+
+footer div.reseaux img {
+  width: 50px;
+  margin: 10px;
+}
+
+footer div.groupe {
+  width: 50%;
+}
+
+footer div.groupe p,
+footer div.groupe H2 {
+  text-align: end;
+}
+
+@media screen and (max-width: 550px) {
+  footer div.reseaux {
+    width: 100%;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -8,6 +41,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: Source Sans Pro,sans-serif;
+}
+
+a:focus {
+  outline: rgba(255, 255, 255, 0.212) solid 1.5px;
 }
 
 header {
@@ -48,7 +85,7 @@ header h1 {
 header p {
   width: 50%;
   text-align: center;
-  padding: 3% 0;
+  padding: 3% 10px;
 }
 
 header div {
@@ -66,22 +103,29 @@ header div {
 }
 
 header div a {
-  padding: 10px 20px;
-  margin: 20px;
-  background: white;
-  border-radius: 10px;
-  height: 3rem;
+  padding: 10px 50px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+header div a:hover {
+  text-decoration: underline;
 }
 
 section#changelog {
   background: #111111;
-  padding: 4% 0;
+  padding: 4% 10px;
   color: white;
 }
 
 section#changelog details {
   max-width: 1024px;
   margin: auto;
+}
+
+section#changelog details :focus {
+  outline: rgba(255, 255, 255, 0.212) solid 1.5px;
 }
 
 section#changelog details summary {
@@ -94,7 +138,7 @@ section#com {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  padding: 15% 0;
+  padding: 15% 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,9 +276,9 @@ section#com form input[type=submit] {
   margin: 20px;
 }
 
-footer {
-  background: #111111;
-  color: white;
-  padding: 5%;
+@media screen and (max-width: 450px) {
+  header p {
+    width: 100%;
+  }
 }
 

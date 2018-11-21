@@ -1,3 +1,4 @@
+@import 'footer';
 *{
     box-sizing: border-box;
 }
@@ -51,8 +52,8 @@ section#pres{
         margin: auto;
     }
     iframe{
-        width: 60vw;
-        height: 40vw;
+        width: 50vw;
+        height: 30vw;
         margin: 2%
     }
 
@@ -104,7 +105,7 @@ section#telechargement{
     background-repeat: no-repeat;
     background-size: cover;
     /*background-attachment: fixed;*/
-    padding: 15% 0;
+    padding: 15% 10px;
     height:90vh;
     display: flex;
     flex-direction: column;
@@ -150,7 +151,7 @@ footer{
     section#pres{
         iframe{
             width: 90vw;
-            height: 70vw;
+            height: 50vw;
         }
     }
     section#galery{
@@ -196,6 +197,14 @@ footer{
         
     }
 
+section#telechargement{
+    p{
+        font-size: 1rem;
+    }
+    a{
+        font-size: 1rem;
+    }
+}
 
 
 }

@@ -86,8 +86,18 @@ Ecrivez ici !"  name="content" id="post_content" ></textarea>
     </section>
 
     <footer>
-        <p>lien vers les réseaux</p>
-
+        <div class="reseaux">
+            <h2>Retrouvez nous sur :</h2>
+            <a href="https://www.facebook.com/glintgame"><img src="img/Facebook_blanc.svg" alt="facebook"></a>
+            <a href="https://twitter.com/glintgame"><img src="img/Twitter_blanc.svg" alt="twitter"></a>
+            <a href="https://www.instagram.com/glintgame/"><img src="img/Instagram_blanc.svg" alt="instagram"></a>
+        </div>
+        <div class="groupe">
+            <h2>Glint créé par :</h2>
+            <p>Marc-Antoine 🎵 -  Théo 🎥</p>
+            <p>Charline 🖌️ -  Léon #️⃣</p>
+            <p>Emilien 🔗 -  Théo #️⃣</p>
+        </div>
     </footer>
 </body>
 
