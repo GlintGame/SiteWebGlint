@@ -22,7 +22,7 @@ footer div.groupe {
 
 footer div.groupe p,
 footer div.groupe H2 {
-  text-align: end;
+  text-align: right;
 }
 
 @media screen and (max-width: 550px) {
@@ -43,12 +43,16 @@ body {
   font-family: Source Sans Pro,sans-serif;
 }
 
+body {
+  background: #111111;
+}
+
 a:focus {
   outline: rgba(255, 255, 255, 0.212) solid 1.5px;
 }
 
 header {
-  background: #383838;
+  /*background: #383838;*/
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;

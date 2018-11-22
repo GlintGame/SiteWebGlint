@@ -43,6 +43,10 @@
             <img src="img/galery/placeholder.png" alt="placeholder">
             <img src="img/galery/placeholder.png" alt="placeholder">
         </div>
+        <div class="popup">
+            <a class="close">&times;</a>
+            <img src="img/galery/placeholder.png" alt="placeholder">
+        </div>
         <div class="fleche"></div>
     </section>
 
@@ -60,20 +64,33 @@
         </div>
         <div class="groupe">
             <h2>Glint créé par :</h2>
-            <p>Marc-Antoine 🎵 - Théo 🎥</p>
-            <p>Charline 🖌️ - Léon #️⃣</p>
-            <p>Emilien 🔗 - Théo #️⃣</p>
+            <p>Marc-Antoine 🎵 -  Théo 🎥</p>
+            <p>Charline 🖌️ -  Léon #️⃣</p>
+            <p>Emilien 🔗 -  Théo #️⃣</p>
         </div>
     </footer>
 
     <script>
         function afficheGallerie() {
-        let e = document.querySelector(".contente");
-        e.classList.toggle("active");
+            let e = document.querySelector(".contente");
+            e.classList.toggle("active");
         }
         let el = document.querySelector(".fleche");
         el.addEventListener("click", afficheGallerie);
+
+
     
+        let images = document.querySelectorAll(".contente img").forEach( e => {
+            e.addEventListener('click', function (ev) {
+                let src = this.src;
+                document.querySelector(".popup img").setAttribute("src", src);
+                document.querySelector(".popup").classList.add("active");
+            })
+        })
+        document.querySelector(".close").addEventListener('click', function() {
+            document.querySelector(".popup").classList.remove("active");
+        })
+        
     </script>
 
 </body>

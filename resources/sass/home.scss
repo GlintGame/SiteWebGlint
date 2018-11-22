@@ -10,6 +10,7 @@ body{
 }
 body{
     background: #111111;
+    z-index: 1;
 }
 header{
     height: 105vh;
@@ -94,14 +95,58 @@ section#galery{
             width: 20vw;
             min-width: 320px;
             margin: 2%;
+            cursor: pointer;
         }
 
+    }
+    div.popup{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        background: rgba(92, 92, 92, 0.8);
+        display: flex;
+        position: fixed;;
+        top: 0;
+        left: 0;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        transition: opacity 200ms;
+        opacity: 0;
+        
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            -webkit-transition: all 200ms;
+            transition: all 200ms;
+            font-size: 2rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: #868686;
+        }
+
+        img{
+            margin: auto;
+            width: 70%;
+        }
+
+    }
+    div.popup.active{
+        opacity: 1;
+        z-index: 2;
     }
     
 }
 
 section#telechargement{
-    background-image: url(../../public/img/forest-02.png);
+    background: url(../../public/img/forest-02.png);
     background-repeat: no-repeat;
     background-size: cover;
     /*background-attachment: fixed;*/

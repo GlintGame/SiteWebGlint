@@ -8,11 +8,14 @@ body{
     padding: 0;
     font-family: Source Sans Pro,sans-serif;
 }
+body{
+    background: #111111;
+}
 a:focus{
     outline: rgba(255, 255, 255, 0.212) solid 1.5px;
 }
 header{
-    background: #383838;
+    /*background: #383838;*/
     position: relative;
     display: flex;
     flex-direction: column;

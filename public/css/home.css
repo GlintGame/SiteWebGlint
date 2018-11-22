@@ -22,7 +22,7 @@ footer div.groupe {
 
 footer div.groupe p,
 footer div.groupe H2 {
-  text-align: end;
+  text-align: right;
 }
 
 @media screen and (max-width: 550px) {
@@ -45,6 +45,7 @@ body {
 
 body {
   background: #111111;
+  z-index: 1;
 }
 
 header {
@@ -174,10 +175,58 @@ section#galery div.contente img {
   width: 20vw;
   min-width: 320px;
   margin: 2%;
+  cursor: pointer;
+}
+
+section#galery div.popup {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background: rgba(92, 92, 92, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
+  opacity: 0;
+}
+
+section#galery div.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+section#galery div.popup .close:hover {
+  color: #868686;
+}
+
+section#galery div.popup img {
+  margin: auto;
+  width: 70%;
+}
+
+section#galery div.popup.active {
+  opacity: 1;
+  z-index: 2;
 }
 
 section#telechargement {
-  background-image: url(/images/forest-02.png?cead0a8d20bd4ed3524cbffc8d621ed5);
+  background: url(/images/forest-02.png?cead0a8d20bd4ed3524cbffc8d621ed5);
   background-repeat: no-repeat;
   background-size: cover;
   /*background-attachment: fixed;*/
