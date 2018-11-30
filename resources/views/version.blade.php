@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/version.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Rosario" rel="stylesheet">
     <title>Glint : Téléchargement</title>
 </head>
 
