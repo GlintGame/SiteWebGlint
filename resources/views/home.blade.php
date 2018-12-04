@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="img/Favicon.png" href="Favicon.png"> 
+    <link rel="icon" type="image/png" href="img/Favicon.png"> 
     <link rel="stylesheet" href="css/home.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Rosario" rel="stylesheet">
@@ -25,19 +25,14 @@
             Son destin : le sauver de la malédiction.<br>
             <br>
             Bienvenue sur le site de Glint, un jeu indépendant en développement depuis septembre 2018 créé par 6 étudiants en MMI.<br>
-            <br>
-            Envie de vous lancer dans l’aventure ? <br>
-            De contribuer au développement du jeu ? <br>
-            Téléchargez, jouez, commentez !</p>
+            </p>
             <a href="{{ $lastVersionRef }}">Télécharger le jeu <span>(Version 1.0)</span></a>
         </div>
     </header>
 
     <section id="pres">
         <h2>Tralier pré-alpha</h2>
-        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fglintgame%2Fvideos%2F242222793139987%2F&show_text=0&width=560"
-            width="600" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-            allowTransparency="true" allowFullScreen="true"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/sLFLuvwOTOY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <p>Voici la toute première version du jeu.<br>
         Encore en développement, vos avis et vos idées peuvent contribuer à son amélioration !<br>
         Alors qu’attendez-vous ?</p>

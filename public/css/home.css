@@ -1,8 +1,11 @@
 @font-face {
   font-family: "Besom";
+  src: url(/fonts/Besom.eot?592ba3bc3705e7ef1478bcd407670fe5);
+  /* IE9 Compat Modes */
+  src: url(/fonts/Besom.eot?592ba3bc3705e7ef1478bcd407670fe5) format("embedded-opentype"), url(/fonts/Besom.otf?7f3ce3236cfc73992d34a63b3d814b26) format("opentype"), url(/fonts/Besom.svg?afdc61449510b21bd91b90c0511a7546) format("svg"), url(/fonts/Besom.ttf?86b56db5ff46014b749dc4cc49df23d2) format("truetype"), url(/fonts/Besom.woff?4f14141babd2abe272e39ba4fc89632e) format("woff"), url(/fonts/Besom.woff2?9f50c157005932465e7270da8d1e28d1) format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
   font-style: normal;
-  font-weight: 500;
-  src: url(/fonts/Besom.ttf?13885ffed96f170f2bd45b67d76fd7e0) format("ttf");
 }
 
 * {
@@ -24,9 +27,9 @@ body {
 
 header {
   height: 105vh;
-  background: url(/images/visusitev9.png?8227f9ca1876fdc4249eca67bedaba5d);
+  background: url(/images/visusitev10.png?ec9e8f53c55d9c7bfbe34179304a6d7f);
   background-size: cover;
-  background-position: left 30%;
+  background-position: left 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,15 +39,15 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0 -30px 30px 0px #111111 inset;
-          box-shadow: 0 -30px 30px 0px #111111 inset;
+  -webkit-box-shadow: 0 -30px 30px 0px #000000 inset;
+          box-shadow: 0 -30px 30px 0px #000000 inset;
 }
 
 header div {
   width: 35%;
+  height: 100%;
   margin: 5%;
   color: white;
-  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,13 +60,15 @@ header div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-shadow: 0px 0px 50px black, 0px 0px 30px black, 0px 0px 15px white;
 }
 
 header div h1 {
-  text-align: left;
-  font-size: 5rem;
+  width: 100%;
+  font-size: 7.5rem;
   margin: 0;
-  font-family: "Besom";
+  padding: 20% 0 0 5%;
+  font-family: "Besom", sans-serif;
 }
 
 header div p {
@@ -73,17 +78,28 @@ header div p {
 
 header div a {
   padding: 10px 50px;
+  margin: 0 0 30% 0;
   font-weight: bold;
   color: white;
   text-decoration: none;
+  font-size: 1.2rem;
 }
 
 header div a:hover {
   text-decoration: underline;
 }
 
+section {
+  color: white;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin: 20px auto;
+}
+
 section#pres {
-  background: #111111;
+  background: #000000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,13 +113,7 @@ section#pres {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: white;
-  padding: 10%;
-}
-
-section#pres h2 {
-  width: 85%;
-  margin: auto;
+  padding: 5% 5% 0% 5%;
 }
 
 section#pres iframe {
@@ -112,9 +122,13 @@ section#pres iframe {
   margin: 2%;
 }
 
+section#pres p {
+  text-align: center;
+}
+
 section#galery {
-  background: #111111;
-  padding: 5% 0;
+  background: #000000;
+  padding: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,12 +142,6 @@ section#galery {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-section#galery h2 {
-  color: white;
-  width: 85%;
-  margin: auto;
 }
 
 section#galery div.contente {
@@ -228,13 +236,12 @@ section#telechargement {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  -webkit-box-shadow: 0 240px 300px -30px #111111 inset,0 -175px 140px -30px #111111 inset;
-          box-shadow: 0 240px 300px -30px #111111 inset,0 -175px 140px -30px #111111 inset;
+  -webkit-box-shadow: 0 240px 300px -30px #000000 inset,0 -175px 140px -30px #000000 inset;
+          box-shadow: 0 240px 300px -30px #000000 inset,0 -175px 140px -30px #000000 inset;
 }
 
 section#telechargement p {
   font-size: 1.5rem;
-  color: white;
   margin-bottom: 5%;
 }
 
@@ -250,12 +257,6 @@ section#telechargement a:hover {
   text-decoration: underline;
 }
 
-footer {
-  background: #111111;
-  color: white;
-  padding: 5%;
-}
-
 @media screen and (max-width: 720px) {
   header {
     -webkit-box-pack: center;
@@ -268,6 +269,10 @@ footer {
     text-align: center;
   }
 
+  header div h1 {
+    padding: 25% 5% 50% 5%;
+  }
+
   section#pres iframe {
     width: 90vw;
     height: 50vw;
@@ -275,7 +280,7 @@ footer {
 
   section#galery div.contente {
     overflow: hidden;
-    max-height: 90vh;
+    max-height: 65vh;
     margin: 40px;
     -webkit-transition: max-height 1s ease-out;
     transition: max-height 1s ease-out;
@@ -332,7 +337,7 @@ footer {
 }
 
 footer {
-  background: #111111;
+  background: #000000;
   color: white;
   padding: 5%;
   display: -webkit-box;
