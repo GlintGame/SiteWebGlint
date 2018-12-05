@@ -11,6 +11,9 @@ footer{
             width: 50px;
             margin: 10px;
         }
+        h2{
+            margin: 20px 10px; 
+        }
 
     }
     div.groupe{
@@ -19,6 +22,7 @@ footer{
         p,H2{
             text-align: right;
         }
+        
         p{
             margin: 5px;
         }
@@ -27,8 +31,21 @@ footer{
 }
 @media screen and (max-width: (550px)){
     footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         div.reseaux{
+            width: initial;
+            h2{
+                text-align: center;
+            }
+        }
+        div.groupe{
             width: 100%;
+
+            p,h2{
+            text-align: center;
+            }
         }
     }
 }

@@ -12,7 +12,10 @@ a.button {
   padding: 10px 50px;
   font-weight: bold;
   color: white;
+  text-align: center;
   text-decoration: none;
+  border: groove 1px white;
+  border-radius: 30px;
   opacity: 0.8;
   -webkit-transition: opacity 0.1s;
   transition: opacity 0.1s;
@@ -70,8 +73,9 @@ body {
 }
 
 header {
-  height: 105vh;
+  height: 100vh;
   background: url(/images/visusitev10.png?56f75f1accf9156a9d5fd8f91ac1f0b0);
+  background-attachment: fixed;
   background-size: cover;
   background-position: left bottom;
   display: -webkit-box;
@@ -83,8 +87,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0 -30px 30px 0px #000000 inset;
-          box-shadow: 0 -30px 30px 0px #000000 inset;
 }
 
 header div {
@@ -135,7 +137,10 @@ section h2 {
 }
 
 section#pres {
-  background: #000000;
+  background: url(/images/visusitev10.png?56f75f1accf9156a9d5fd8f91ac1f0b0);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: left bottom;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,6 +155,8 @@ section#pres {
       -ms-flex-align: center;
           align-items: center;
   padding: 5% 5% 0% 5%;
+  -webkit-box-shadow: 0 -260px 100px 0px #000000 inset;
+          box-shadow: 0 -260px 100px 0px #000000 inset;
 }
 
 section#pres iframe {
@@ -252,12 +259,12 @@ section#galery div.popup.active {
 }
 
 section#telechargement {
-  background: url(/images/forest-02.png?cead0a8d20bd4ed3524cbffc8d621ed5);
+  background: url(/images/forest.png?44008eb26533f96bc0c19ec208cfb3bb);
   background-repeat: no-repeat;
   background-size: cover;
   /*background-attachment: fixed;*/
-  padding: 15% 10px;
-  height: 90vh;
+  padding: 10px;
+  height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,8 +279,8 @@ section#telechargement {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  -webkit-box-shadow: 0 240px 300px -30px #000000 inset,0 -175px 140px -30px #000000 inset;
-          box-shadow: 0 240px 300px -30px #000000 inset,0 -175px 140px -30px #000000 inset;
+  -webkit-box-shadow: 40px 140px 140px -30px #000000 inset, -40px -80px 80px -30px #000000 inset;
+          box-shadow: 40px 140px 140px -30px #000000 inset, -40px -80px 80px -30px #000000 inset;
 }
 
 section#telechargement p {
@@ -309,7 +316,6 @@ section#telechargement a {
   section#galery div.contente {
     overflow: hidden;
     max-height: 65vh;
-    margin: 40px;
     -webkit-transition: max-height 1s ease-out;
     transition: max-height 1s ease-out;
   }
@@ -346,7 +352,7 @@ section#telechargement a {
     max-height: 1850px;
   }
 
-  section#galery div.contente.active + div.fleche {
+  section#galery div.contente.active div.fleche {
     -webkit-transform: rotate(-135deg);
             transform: rotate(-135deg);
   }
@@ -361,10 +367,20 @@ section#telechargement a {
 }
 
 @media screen and (max-width: 450px) {
+  section#galery {
+    padding-top: 10%;
+  }
+
   section#galery div.contente.active {
     max-height: 1850px;
     -webkit-transition: max-height 1s ease-out;
     transition: max-height 1s ease-out;
+  }
+
+  section#telechargement {
+    height: 50vh;
+    -webkit-box-shadow: 0 100px 100px -15px #000000 inset, 0 -100px 100px -15px #000000 inset;
+            box-shadow: 0 100px 100px -15px #000000 inset, 0 -100px 100px -15px #000000 inset;
   }
 }
 
@@ -386,6 +402,10 @@ footer div.reseaux img {
   margin: 10px;
 }
 
+footer div.reseaux h2 {
+  margin: 20px 10px;
+}
+
 footer div.groupe {
   width: 50%;
 }
@@ -400,8 +420,34 @@ footer div.groupe p {
 }
 
 @media screen and (max-width: 550px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
   footer div.reseaux {
+    width: initial;
+  }
+
+  footer div.reseaux h2 {
+    text-align: center;
+  }
+
+  footer div.groupe {
     width: 100%;
+  }
+
+  footer div.groupe p,
+  footer div.groupe h2 {
+    text-align: center;
   }
 }
 

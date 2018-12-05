@@ -12,7 +12,10 @@ a.button {
   padding: 10px 50px;
   font-weight: bold;
   color: white;
+  text-align: center;
   text-decoration: none;
+  border: groove 1px white;
+  border-radius: 30px;
   opacity: 0.8;
   -webkit-transition: opacity 0.1s;
   transition: opacity 0.1s;
@@ -99,6 +102,15 @@ header {
 }
 
 header a.retour {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+header a.button {
+  border: none;
+}
+
+header a.retour {
   position: absolute;
   top: 4%;
   left: 3%;
@@ -177,7 +189,7 @@ section#changelog details summary {
 }
 
 section#com {
-  background-image: url(/images/otherfoest-01.png?70793c2daa9834041b96d38d9b04c094);
+  background-image: url(/images/otherfoest.png?50f19f7bf937732096ef5d901bad7a5c);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -199,17 +211,32 @@ section#com {
           box-shadow: 0 90px 100px 10px #000 inset, 0 -175px 140px -30px #000 inset;
 }
 
-section#com div {
+section#com div.error {
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 15px;
+  color: #ffc6c6;
+  margin: 30px 20px;
+}
+
+section#com div.error ul {
+  padding: 10px 30px;
+}
+
+section#com div.error ul li {
+  list-style-type: none;
+}
+
+section#com div.content {
+  width: 100%;
   max-width: 900px;
-  width: 95%;
   color: white;
 }
 
-section#com div p {
+section#com div.content p {
   padding-bottom: 4%;
 }
 
-section#com div div.com {
+section#com div.content div.com {
   width: 95%;
   max-width: 900px;
   padding: 10px 30px;
@@ -219,13 +246,14 @@ section#com div div.com {
   color: white;
 }
 
-section#com div div.com h3 {
+section#com div.content div.com h3 {
   border-bottom: solid white 1.5px;
   padding: 5px;
+  padding-right: 20px;
   display: table-cell;
 }
 
-section#com div div.com em {
+section#com div.content div.com em {
   font-size: 0.75rem;
   color: #ffffffaf;
 }
@@ -351,6 +379,10 @@ footer div.reseaux img {
   margin: 10px;
 }
 
+footer div.reseaux h2 {
+  margin: 20px 10px;
+}
+
 footer div.groupe {
   width: 50%;
 }
@@ -365,8 +397,34 @@ footer div.groupe p {
 }
 
 @media screen and (max-width: 550px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
   footer div.reseaux {
+    width: initial;
+  }
+
+  footer div.reseaux h2 {
+    text-align: center;
+  }
+
+  footer div.groupe {
     width: 100%;
+  }
+
+  footer div.groupe p,
+  footer div.groupe h2 {
+    text-align: center;
   }
 }
 

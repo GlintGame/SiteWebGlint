@@ -25,7 +25,7 @@
             Son destin : le sauver de la malédiction.<br>
             <br>
             Bienvenue sur le site de Glint, un jeu indépendant en développement depuis septembre 2018 créé par 6 étudiants en MMI.<br>
-            </p>
+            <br>Téléchargez, jouez, commentez !</p>
             <a href="{{ $lastVersionRef }}" class="button">Télécharger le jeu <span>(Version 0.1)</span></a>
         </div>
     </header>
@@ -41,10 +41,10 @@
     <section id="galery">
             <h2>Galerie</h2>
         <div class="contente">
-            <img src="img/galery/team.png" alt="placeholder">
-            <img src="img/galery/croquis.png" alt="placeholder">
-            <img src="img/galery/speeddraw.jpg" alt="placeholder">
-            <img src="img/galery/placeholder.png" alt="placeholder">
+            <img src="img/galery/team.png" alt="">
+            <img src="img/galery/croquis.png" alt="">
+            <img src="img/galery/second.jpg" alt="">
+            <img src="img/galery/speeddraw.jpg" alt="">
             <img src="img/galery/placeholder.png" alt="placeholder">
             <img src="img/galery/placeholder.png" alt="placeholder">
         </div>
@@ -56,26 +56,26 @@
     </section>
 
     <section id="telechargement">
-        <p>Vous souhaitez participer au dévlopement de glint ? <br>Tester et nous des retour sur la derrenière version du jeu ?</p>
+        <p>Envie de vous lancer dans l’aventure ?
+        <br>De contribuer au développement du jeu ?
+        <br>Téléchargez, jouez, commentez !</p>
         <a href="{{ $lastVersionRef }}" class="button">Télécharger le jeu <span>(Version 0.1)</span></a>
     </section>
 
     <footer>
         <div class="reseaux">
             <h2>Retrouvez nous sur :</h2>
-            <a href="https://www.facebook.com/glintgame"><img src="img/Facebook_blanc.svg" alt="facebook"></a>
-            <a href="https://twitter.com/glintgame"><img src="img/Twitter_blanc.svg" alt="twitter"></a>
-            <a href="https://www.instagram.com/glintgame/"><img src="img/Instagram_blanc.svg" alt="instagram"></a>
+            <a href="https://www.facebook.com/glintgame"><img src="img/facebook.svg" alt="facebook"></a>
+            <a href="https://twitter.com/glintgame"><img src="img/twitter.svg" alt="twitter"></a>
+            <a href="https://www.instagram.com/glintgame/"><img src="img/instagram.svg" alt="instagram"></a>
         </div>
         <div class="groupe">
             <h2>L'équipe de glint :</h2>
             
-            <p>Théo W.</p>
-            <p>Charline</p> 
-            <p>Léon</p>
-            <p>Emilien</p>
-            <p>Théo L.</p>
-            <p>Marc-Antoine </p>
+            
+            <p>Charline  -  Théo W. </p>
+            <p>Marc-Antoine  -  Léon</p>
+            <p>Emilien  -  Théo L.</p>
         </div>
 
         <div class="copy"></div>

@@ -15,14 +15,15 @@ body{
     z-index: 1;
 }
 header{
-    height: 105vh;
+    height: 100vh;
     background: url(../img/visusitev10.png);
+    background-attachment: fixed;
     background-size: cover;
     background-position: left bottom ;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    box-shadow: 0 -30px 30px 0px #000000 inset;
+    //box-shadow: 0 -30px 30px 0px #000000 inset;
      
     div{
         width: 35%;
@@ -61,13 +62,19 @@ section{
     }
 }
 section#pres{
-    background: #000000;
+    //background: #000000;
+    background: url(../img/visusitev10.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: left bottom ;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     
     padding: 5% 5% 0% 5%;
+    box-shadow: 0 -260px 100px 0px #000000 inset;
+    
     
 
     
@@ -154,18 +161,18 @@ section#galery{
 }
 
 section#telechargement{
-    background: url(../../public/img/forest-02.png);
+    background: url(../../public/img/forest.png);
     background-repeat: no-repeat;
     background-size: cover;
     /*background-attachment: fixed;*/
-    padding: 15% 10px;
-    height:90vh;
+    padding:10px;
+    height:60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    box-shadow:  0 240px 300px -30px #000000 inset,0 -175px 140px -30px #000000 inset;
+    box-shadow:  40px 140px 140px -30px #000000 inset, -40px -80px 80px -30px #000000 inset;
     p{
         font-size: 1.5rem;
         margin-bottom:5%; 
@@ -202,14 +209,13 @@ section#telechargement{
         div.contente{
             overflow: hidden;
             max-height: 65vh;
-            margin: 40px;
             transition: max-height 1s ease-out;
 
             img{
                 width: 70vw;
                 min-width: 320px;
                 margin: 2%;
-            }
+            } 
             div.popup{
                 img{
                     width: 100%;
@@ -235,13 +241,10 @@ section#telechargement{
             
         }
 
-        div.contente.active + div.fleche{
+        div.contente.active div.fleche{
             transform: rotate(-135deg);
 
         }
-        
-
-
 
         
     }
@@ -260,12 +263,18 @@ section#telechargement{
 
 @media screen and (max-width: 450px){
     section#galery{
+        padding-top:10%; 
         div.contente.active{
             max-height: 1850px;
             transition: max-height 1s ease-out;
             
         }
     }
+    section#telechargement{
+        height: 50vh;
+        box-shadow: 0 100px 100px -15px #000000 inset, 0 -100px 100px -15px #000000 inset;
+    }
+
 }
 
 
