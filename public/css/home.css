@@ -8,6 +8,50 @@
   font-style: normal;
 }
 
+a.button {
+  padding: 10px 50px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+  text-shadow: 0px 0px 10px #727272;
+  -webkit-animation: 0.5s ease-out alternate infinite blinking-text;
+          animation: 0.5s ease-out alternate infinite blinking-text;
+}
+
+a.button span {
+  font-size: smaller;
+  color: #dbdbdb;
+}
+
+a.button:hover {
+  opacity: 1;
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes blinking-text {
+  form {
+    text-shadow: 0px 0px 30px #727272;
+  }
+
+  to {
+    text-shadow: 0px 0px 30px rgba(114, 114, 114, 0.1);
+  }
+}
+
+@keyframes blinking-text {
+  form {
+    text-shadow: 0px 0px 30px #727272;
+  }
+
+  to {
+    text-shadow: 0px 0px 30px rgba(114, 114, 114, 0.1);
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -27,9 +71,9 @@ body {
 
 header {
   height: 105vh;
-  background: url(/images/visusitev10.png?ec9e8f53c55d9c7bfbe34179304a6d7f);
+  background: url(/images/visusitev10.png?56f75f1accf9156a9d5fd8f91ac1f0b0);
   background-size: cover;
-  background-position: left 35%;
+  background-position: left bottom;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,16 +121,8 @@ header div p {
 }
 
 header div a {
-  padding: 10px 50px;
+  font-size: 1.25rem;
   margin: 0 0 30% 0;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-header div a:hover {
-  text-decoration: underline;
 }
 
 section {
@@ -247,14 +283,6 @@ section#telechargement p {
 
 section#telechargement a {
   font-size: 1.5rem;
-  padding: 10px 50px;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-}
-
-section#telechargement a:hover {
-  text-decoration: underline;
 }
 
 @media screen and (max-width: 720px) {
@@ -290,6 +318,10 @@ section#telechargement a:hover {
     width: 70vw;
     min-width: 320px;
     margin: 2%;
+  }
+
+  section#galery div.contente div.popup img {
+    width: 100%;
   }
 
   section#galery div.fleche {
@@ -361,6 +393,10 @@ footer div.groupe {
 footer div.groupe p,
 footer div.groupe H2 {
   text-align: right;
+}
+
+footer div.groupe p {
+  margin: 5px;
 }
 
 @media screen and (max-width: 550px) {

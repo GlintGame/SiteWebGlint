@@ -15,13 +15,21 @@
 <body>
     <header>
         <a href="{{ route('home') }}" class="retour">Retour à l'accueil</a>
-        <h1>Télécharger Glint (V.01)</h1>
-        <p>Vous vous appréter à télécharger la toute première version de Glint. De nombreux bugs peuvent être présent
-            et c’est à vous de machin chose... Dispo partout mais... Pas dispo sur téléphone et tout....</p>
+        <h1>Télécharger Glint (v0.1)</h1>
         <div>
-            <a href="{{ $version->url }}" class="win">Télécharger la version Windows (200mo)</a>
-            <a href="{{ $version->url }}" class="mac">Télécharger la version Mac (200mo)</a>
-            <a href="{{ $version->url }}" class="linux">Télécharger la version Linux (200mo)</a>
+            
+            <a href="{{ $version->url }}" class="button">
+                <img src="img/logos/windows.svg" alt="">
+                <p>Télécharger la version <br> Windows</p>
+            </a>
+            <a href="{{ $version->url }}" class="button">
+                <img src="img/logos/mac.svg" alt="">
+                <p>Télécharger la version <br> Mac</p>
+            </a>
+            <a href="{{ $version->url }}" class="button">
+                <img src="img/logos/linux.svg" alt="">
+                <p>Télécharger la version <br> Linux</p>
+            </a>
         </div>
     </header>
 
@@ -37,12 +45,7 @@
 
         <div>
             <h2>On a besoin de vos avis !!!</h2>
-            <p>
-                Mox dicta finierat, multitudo omnis ad, quae imperator voluit, promptior laudato consilio consensit in
-                pacem ea ratione maxime percita, quod norat expeditionibus crebris fortunam eius in malis tantum
-                civilibus vigilasse, cum autem bella moverentur externa, accidisse plerumque luctuosa, icto post haec
-                foedere gentium ritu perfectaque sollemnitate imperator Mediolanum ad hiberna discessit.
-            </p>
+            <p></p>
 
             <form action="{{ route('addPost', ['version' => $version->name]) . '#form-comment' }}" method="POST" id="form-comment">
 

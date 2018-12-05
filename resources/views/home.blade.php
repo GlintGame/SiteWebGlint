@@ -26,7 +26,7 @@
             <br>
             Bienvenue sur le site de Glint, un jeu indépendant en développement depuis septembre 2018 créé par 6 étudiants en MMI.<br>
             </p>
-            <a href="{{ $lastVersionRef }}">Télécharger le jeu <span>(Version 1.0)</span></a>
+            <a href="{{ $lastVersionRef }}" class="button">Télécharger le jeu <span>(Version 0.1)</span></a>
         </div>
     </header>
 
@@ -41,9 +41,9 @@
     <section id="galery">
             <h2>Galerie</h2>
         <div class="contente">
-            <img src="img/galery/placeholder.png" alt="placeholder">
-            <img src="img/galery/placeholder.png" alt="placeholder">
-            <img src="img/galery/placeholder.png" alt="placeholder">
+            <img src="img/galery/team.png" alt="placeholder">
+            <img src="img/galery/croquis.png" alt="placeholder">
+            <img src="img/galery/speeddraw.jpg" alt="placeholder">
             <img src="img/galery/placeholder.png" alt="placeholder">
             <img src="img/galery/placeholder.png" alt="placeholder">
             <img src="img/galery/placeholder.png" alt="placeholder">
@@ -57,7 +57,7 @@
 
     <section id="telechargement">
         <p>Vous souhaitez participer au dévlopement de glint ? <br>Tester et nous des retour sur la derrenière version du jeu ?</p>
-        <a href="{{ $lastVersionRef }}">Télécharger le jeu <span>(Version 1.0)</a>
+        <a href="{{ $lastVersionRef }}" class="button">Télécharger le jeu <span>(Version 0.1)</span></a>
     </section>
 
     <footer>
@@ -68,12 +68,19 @@
             <a href="https://www.instagram.com/glintgame/"><img src="img/Instagram_blanc.svg" alt="instagram"></a>
         </div>
         <div class="groupe">
-            <h2>Glint créé par :</h2>
-            <p>Marc-Antoine 🎵 -  Théo 🎥</p>
-            <p>Charline 🖌️ -  Léon #️⃣</p>
-            <p>Emilien 🔗 -  Théo #️⃣</p>
+            <h2>L'équipe de glint :</h2>
+            
+            <p>Théo W.</p>
+            <p>Charline</p> 
+            <p>Léon</p>
+            <p>Emilien</p>
+            <p>Théo L.</p>
+            <p>Marc-Antoine </p>
         </div>
+
+        <div class="copy"></div>
     </footer>
+    
 
     <script>
         function afficheGallerie() {

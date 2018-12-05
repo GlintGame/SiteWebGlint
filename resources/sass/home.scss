@@ -1,5 +1,5 @@
 @import 'fonts';
-
+@import 'button';
 
 *{
     box-sizing: border-box;
@@ -18,7 +18,7 @@ header{
     height: 105vh;
     background: url(../img/visusitev10.png);
     background-size: cover;
-    background-position: left 35% ;
+    background-position: left bottom ;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -48,15 +48,8 @@ header{
             line-height: 1.5rem;
         }
         a{
-            padding: 10px 50px;
+            font-size: 1.25rem;
             margin: 0 0 30% 0;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-        a:hover{
-            text-decoration: underline;
         }
     }
 }
@@ -180,13 +173,6 @@ section#telechargement{
 
     a{
         font-size: 1.5rem;
-        padding: 10px 50px;
-        font-weight: bold;
-        color: white;
-        text-decoration: none;
-    }
-    a:hover{
-        text-decoration: underline;
     }
 
 
@@ -223,6 +209,11 @@ section#telechargement{
                 width: 70vw;
                 min-width: 320px;
                 margin: 2%;
+            }
+            div.popup{
+                img{
+                    width: 100%;
+                }
             }
         }
 
