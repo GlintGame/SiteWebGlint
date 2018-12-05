@@ -19,6 +19,11 @@ class PostController extends Controller
             return view('error', ['message' => '404 : cette version du jeu n\'existe pas']);
         }
 
+        $request->validate([
+            'content' => 'bail|required',
+            'given_name' => 'bail|required|max:255'
+        ]);
+
         $content = $request->input('content');
         $givenName = $request->input('given_name');
 
@@ -35,8 +40,10 @@ class PostController extends Controller
             $last_post = new Carbon($user->last_post);
             if($last_post->diffInMinutes(Carbon::now()) < 5)
             {
-                // flash to indicate you cant post
-                return redirect()->route('version', ['version' => $versionName])->with('posted', 'no');
+                // flash to indicate you cant post -> find a way to put this in the error
+                return redirect()
+                        ->route('version', ['version' => $versionName])
+                        ->withErrors(['Vous avez déja posté il y a moins de 5min, réessayez plus tard']);
             }
             else
             {
@@ -52,6 +59,6 @@ class PostController extends Controller
             'given_name'    => $givenName
         ]);
 
-        return redirect()->route('version', ['version' => $versionName]);;
+        return redirect()->route('version', ['version' => $versionName]);
     }
 }

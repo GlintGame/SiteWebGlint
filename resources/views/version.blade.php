@@ -17,16 +17,15 @@
         <a href="{{ route('home') }}" class="retour">Retour à l'accueil</a>
         <h1>Télécharger Glint (v0.1)</h1>
         <div>
-            
-            <a href="{{ $version->url }}" class="button">
+            <a href="game_version/{{ $version->url }}/glint_win.zip" class="button">
                 <img src="img/logos/windows.svg" alt="">
                 <p>Télécharger la version <br> Windows</p>
             </a>
-            <a href="{{ $version->url }}" class="button">
+            <a href="game_version/{{ $version->url }}/glint_mac.zip" class="button">
                 <img src="img/logos/mac.svg" alt="">
                 <p>Télécharger la version <br> Mac</p>
             </a>
-            <a href="{{ $version->url }}" class="button">
+            <a href="game_version/{{ $version->url }}/glint_lin.zip" class="button">
                 <img src="img/logos/linux.svg" alt="">
                 <p>Télécharger la version <br> Linux</p>
             </a>
@@ -36,7 +35,7 @@
     <section id="changelog">
         <details>
             <summary>Derniers changements</summary>
-            <p>{{ $version->change_log }}</p>
+            <p>{!! nl2br(e($version->change_log)) !!}</p>
         </details>
     </section>
 
@@ -50,13 +49,18 @@
             <form action="{{ route('addPost', ['version' => $version->name]) . '#form-comment' }}" method="POST" id="form-comment">
 
                 @csrf
-                <h2>Laisser un avis sur le jeu</h2>
 
-                @if (session('posted') == 'no')
-                <div style="color: red">
-                    Vous avez déja posté il y a moins de 5min, réessayez plus tard
-                </div>
+                @if ($errors->any())
+                    <div style="color: red">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
                 @endif
+
+                <h2>Laisser un avis sur le jeu</h2>
 
                 <label for="post_name"></label>
                 <input type="text" name="given_name" placeholder="Psodonyme" id="post_name">
@@ -72,17 +76,15 @@ Ecrivez ici !"  name="content" id="post_content" ></textarea>
             </form>
 
             @foreach ($posts as $post)
-
-            <div class="com">
-                <h3>
-                    {{ $post->given_name }}
-                    <em>{{ ($post->user == null) ? '(une loupiote anonyme)' : $post->user }}</em>
-                </h3>
-                <p>
-                    {!! nl2br(e($post->content)) !!}
-                </p>
-            </div>
-
+                <div class="com">
+                    <h3>
+                        {{ $post->given_name }}
+                        <em>{{ ($post->user == null) ? '(une loupiote anonyme)' : $post->user }}</em>
+                    </h3>
+                    <p>
+                        {!! nl2br(e($post->content)) !!}
+                    </p>
+                </div>
             @endforeach
 
         </div>
