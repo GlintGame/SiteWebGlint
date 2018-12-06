@@ -1,4 +1,4 @@
-a.button{
+a.button {
     padding: 10px 50px;
     font-weight: bold;
     color: white;
@@ -6,28 +6,32 @@ a.button{
     text-decoration: none;
     border: groove 1px white;
     border-radius: 30px;
-    opacity: 0.8;
-    transition: opacity 0.1s;
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in;
     text-shadow: 0px 0px 10px rgba(114, 114, 114, 1);
-    animation: 0.5s ease-out alternate infinite blinking-text;
-    
-    span{
-        font-size: smaller;  
+    animation: 1s ease-out alternate infinite blinking-text;
+
+    span {
+        font-size: smaller;
         color: rgb(219, 219, 219);
-        }
-    
-    
+    }
 }
-a.button:hover{
+a.button:hover {
     opacity: 1;
     animation: none;
 }
 
-@keyframes blinking-text{
-    form{
-        text-shadow: 0px 0px 30px rgba(114, 114, 114, 1);
+@keyframes blinking-text {
+    0% {
+        text-shadow: 0px 0px 80px rgb(255, 255, 255);
     }
-    to{
-        text-shadow: 0px 0px 30px rgba(114, 114, 114, 0.1);
+    100% {
+        text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.1);
+    }
+}
+
+@media screen and (max-width: (550px)) {
+    a.button {
+        opacity: 0.9;
     }
 }

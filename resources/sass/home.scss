@@ -1,31 +1,31 @@
-@import 'fonts';
-@import 'button';
+@import "fonts";
+@import "button";
 
-*{
+* {
     box-sizing: border-box;
 }
 html,
-body{
+body {
     margin: 0;
     padding: 0;
-    font-family: Rosario,sans-serif;
+    font-family: Rosario, sans-serif;
 }
-body{
+body {
     background: #111111;
     z-index: 1;
 }
-header{
+header {
     height: 100vh;
     background: url(../img/visusitev11.jpg);
     background-attachment: fixed;
     background-size: cover;
-    background-position: left bottom ;
+    background-position: left bottom;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     //box-shadow: 0 -30px 30px 0px #000000 inset;
-     
-    div{
+
+    div {
         width: 35%;
         height: 100%;
         margin: 5%;
@@ -34,61 +34,64 @@ header{
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        text-shadow: 0px 0px 50px rgb(0, 0, 0),0px 0px 30px rgb(0, 0, 0), 0px 0px 15px white;
+        text-shadow: 0px 0px 50px rgb(0, 0, 0), 0px 0px 30px rgb(0, 0, 0),
+            0px 0px 15px white;
 
-
-        h1{
+        h1 {
             width: 100%;
             font-size: 7.5rem;
             margin: 0;
             padding: 20% 0 0 5%;
             font-family: "Besom", sans-serif;
+            color: #f6f6f6;
+            font-weight: normal;
+            line-height: 1;
         }
-        p{
+        p {
             padding: 0 5%;
             line-height: 1.5rem;
         }
-        a{
-            font-size: 1.25rem;
+        a {
+            font-size: 1.3rem;
             margin: 0 0 30% 0;
         }
     }
 }
-section{
+section {
     color: white;
-    h2{
+    h2 {
         font-size: 2rem;
         margin: 20px auto;
+        text-shadow: 0px 0px 50px rgb(0, 0, 0), 0px 0px 30px rgb(0, 0, 0),
+            0px 0px 15px white;
     }
 }
-section#pres{
+section#pres {
     //background: #000000;
     background: url(../img/visusitev11.jpg);
     background-attachment: fixed;
     background-size: cover;
-    background-position: left bottom ;
+    background-position: left bottom;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    padding: 5% 5% 0% 5%;
-    box-shadow: 0 -260px 100px 0px #000000 inset;
-    
-    
 
-    
-    iframe{
+    padding: 5% 5% 0% 5%;
+    box-shadow: 0 -100vh 100vh -50vh #000000 inset;
+
+    iframe {
         width: 50vw;
         height: 30vw;
-        margin: 2%
+        margin: 2%;
+        box-shadow: 0 0 100px 0 black;
     }
-    p{
+    p {
         text-align: center;
     }
 }
 
-section#galery{
+section#galery {
     background: #000000;
     padding: 5%;
     display: flex;
@@ -96,8 +99,7 @@ section#galery{
     justify-content: center;
     align-items: center;
 
-
-    div.contente{
+    div.contente {
         width: 90%;
         max-width: 1920px;
         margin: auto;
@@ -106,22 +108,21 @@ section#galery{
         justify-content: center;
         align-items: center;
 
-        img{
+        img {
             width: 20vw;
             min-width: 320px;
             margin: 2%;
             cursor: pointer;
         }
-
     }
-    div.popup{
+    div.popup {
         width: 100%;
         height: 100%;
         position: absolute;
         z-index: -1;
-        background: rgba(92, 92, 92, 0.8);
+        background: rgba(92, 92, 92, 0.5);
         display: flex;
-        position: fixed;;
+        position: fixed;
         top: 0;
         left: 0;
         margin: 0;
@@ -129,7 +130,6 @@ section#galery{
         height: 100vh;
         transition: opacity 200ms;
         opacity: 0;
-        
 
         .close {
             position: absolute;
@@ -147,83 +147,76 @@ section#galery{
             color: #868686;
         }
 
-        img{
+        img {
             margin: auto;
             width: 70%;
         }
-
     }
-    div.popup.active{
+    div.popup.active {
         opacity: 1;
         z-index: 2;
     }
-    
 }
 
-section#telechargement{
+section#telechargement {
     background: url(../../public/img/forest.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     /*background-attachment: fixed;*/
-    padding:10px;
-    height:60vh;
+    padding: 10px;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    box-shadow:  40px 140px 140px -30px #000000 inset, -40px -80px 80px -30px #000000 inset;
-    p{
+    box-shadow: 40px 140px 140px -30px #000000 inset,
+        -40px -80px 80px -30px #000000 inset;
+    p {
         font-size: 1.5rem;
-        margin-bottom:5%; 
+        margin-bottom: 5%;
     }
 
-    a{
+    a {
         font-size: 1.5rem;
     }
-
-
-
 }
 
-
-
-@media screen and (max-width: 720px){
-    header{
+@media screen and (max-width: 720px) {
+    header {
         justify-content: center;
-        div{
+        div {
             width: 90%;
             text-align: center;
-            h1{
+            h1 {
                 padding: 25% 5% 50% 5%;
             }
         }
     }
-    section#pres{
-        iframe{
+    section#pres {
+        iframe {
             width: 90vw;
             height: 50vw;
         }
     }
-    section#galery{
-        div.contente{
+    section#galery {
+        div.contente {
             overflow: hidden;
             max-height: 65vh;
             transition: max-height 1s ease-out;
 
-            img{
+            img {
                 width: 70vw;
                 min-width: 320px;
                 margin: 2%;
-            } 
-            div.popup{
-                img{
-                    width: 100%;
-                }
             }
         }
-
-        div.fleche{
+        div.popup {
+            img {
+                width: 95%;
+            }
+        }
+        div.fleche {
             width: 40px;
             height: 40px;
             transform: rotate(45deg);
@@ -232,57 +225,49 @@ section#telechargement{
             border-radius: 4px;
             transition: transform 1s 1s;
         }
-        div.fleche:hover{
+        div.fleche:hover {
             cursor: pointer;
         }
 
-        div.contente.active{
+        div.contente.active {
             max-height: 1850px;
-            
         }
 
-        div.contente.active div.fleche{
+        div.contente.active div.fleche {
             transform: rotate(-135deg);
-
         }
-
-        
     }
 
-section#telechargement{
-    p{
-        font-size: 1rem;
-    }
-    a{
-        font-size: 1rem;
+    section#telechargement {
+        p {
+            font-size: 1rem;
+        }
+        a {
+            font-size: 1rem;
+        }
     }
 }
 
-
-}
-
-@media screen and (max-width: 450px){
-    header{
-        background-attachment:scroll ;
+@media screen and (max-width: 450px) {
+    header {
+        background-attachment: scroll;
     }
-    section#pres{
+    section#pres {
         background: #000000;
-        background-attachment:scroll ;
+        background-attachment: scroll;
     }
-    section#galery{
-        padding-top:10%; 
-        div.contente.active{
+    section#galery {
+        padding-top: 10%;
+        div.contente.active {
             max-height: 1850px;
             transition: max-height 1s ease-out;
-            
         }
     }
-    section#telechargement{
+    section#telechargement {
         height: 50vh;
-        box-shadow: 0 100px 100px -15px #000000 inset, 0 -100px 100px -15px #000000 inset;
+        box-shadow: 0 100px 100px -15px #000000 inset,
+            0 -100px 100px -15px #000000 inset;
     }
-
 }
 
-
-@import 'footer';
+@import "footer";

@@ -1,50 +1,65 @@
-footer{
+footer {
     background: #000000;
     color: white;
     padding: 5%;
     display: flex;
 
-    div.reseaux{
+    div.reseaux {
         width: 50%;
-        
-        img{
+
+        img {
             width: 50px;
             margin: 10px;
         }
-        h2{
-            margin: 20px 10px; 
-        }
 
+        h2 {
+            margin: 20px 10px;
+        }
     }
-    div.groupe{
+    div.groupe {
         width: 50%;
 
-        p,H2{
+        p,
+        h2 {
             text-align: right;
         }
-        
-        p{
+
+        p {
             margin: 5px;
         }
     }
-    
 }
-@media screen and (max-width: (550px)){
-    footer{
+div.copy {
+    background: black;
+    color: rgb(216, 216, 216);
+    width: 100%;
+    text-align: center;
+    padding: 10px 5px;
+    a {
+        text-decoration: none;
+        color: rgb(216, 216, 216);
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+@media screen and (max-width: (550px)) {
+    footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        div.reseaux{
+        div.reseaux {
             width: initial;
-            h2{
+            h2 {
                 text-align: center;
             }
         }
-        div.groupe{
+        div.groupe {
             width: 100%;
 
-            p,h2{
-            text-align: center;
+            p,
+            h2 {
+                text-align: center;
             }
         }
     }

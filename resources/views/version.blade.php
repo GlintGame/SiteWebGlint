@@ -16,7 +16,7 @@
     <header>
         <a href="{{ route('home') }}" class="retour">◄ Accueil</a>
 
-        <h1>Télécharger Glint (v0.1)</h1>
+        <h1>Télécharger Glint <span>(V0.1)</span></h1>
         <div>
             <a href="game_version/{{ $version->url }}/glint_win.zip" class="button" download>
                 <img src="img/logos/windows.svg" alt="">
@@ -44,7 +44,7 @@
     <section id="com">
 
         <div class="content">
-            <h2>On a besoin de vos avis !!!</h2>
+            <h2>Vos avis nous intéressent !</h2>
             <p>Vous avez aimé notre jeu ? Vous avez trouvé un bug ? Des idées d’améliorations ?
             <br>Dites-le-nous en commentaire !</p>
 
@@ -106,8 +106,8 @@
             <p>Emilien  -  Théo L.</p>
         </div>
 
-        <div class="copy"></div>
     </footer>
+    <div class="copy">GlintGame - <a href="www.creativecommons.fr">www.creativecommons.fr</a></div>
 </body>
 
 </html>

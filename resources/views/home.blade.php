@@ -31,7 +31,7 @@
     </header>
 
     <section id="pres">
-        <h2>Tralier pré-alpha</h2>
+        <h2>Trailer pré-alpha</h2>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/sLFLuvwOTOY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <p>Voici la toute première version du jeu.<br>
         Encore en développement, vos avis et vos idées peuvent contribuer à son amélioration !<br>
@@ -78,8 +78,9 @@
             <p>Emilien  -  Théo L.</p>
         </div>
 
-        <div class="copy"></div>
+        
     </footer>
+    <div class="copy">GlintGame - <a href="www.creativecommons.fr">www.creativecommons.fr</a></div>
     
 
     <script>
