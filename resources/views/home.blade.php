@@ -41,8 +41,8 @@
     <section id="galery">
             <h2>Galerie</h2>
         <div class="contente">
-            <img src="img/galery/team.png" alt="">
-            <img src="img/galery/croquis.png" alt="">
+            <img src="img/galery/team.jpg" alt="">
+            <img src="img/galery/croquis.jpg" alt="">
             <img src="img/galery/second.jpg" alt="">
             <img src="img/galery/speeddraw.jpg" alt="">
             <img src="img/galery/placeholder.png" alt="placeholder">

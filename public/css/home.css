@@ -74,7 +74,7 @@ body {
 
 header {
   height: 100vh;
-  background: url(/images/visusitev10.png?56f75f1accf9156a9d5fd8f91ac1f0b0);
+  background: url(/images/visusitev11.jpg?39793f174cf00ac1ad497714cef9822e);
   background-attachment: fixed;
   background-size: cover;
   background-position: left bottom;
@@ -137,7 +137,7 @@ section h2 {
 }
 
 section#pres {
-  background: url(/images/visusitev10.png?56f75f1accf9156a9d5fd8f91ac1f0b0);
+  background: url(/images/visusitev11.jpg?39793f174cf00ac1ad497714cef9822e);
   background-attachment: fixed;
   background-size: cover;
   background-position: left bottom;
@@ -259,7 +259,7 @@ section#galery div.popup.active {
 }
 
 section#telechargement {
-  background: url(/images/forest.png?44008eb26533f96bc0c19ec208cfb3bb);
+  background: url(/images/forest.jpg?ccb042c10c3b3f7b3f6132c31e5cb551);
   background-repeat: no-repeat;
   background-size: cover;
   /*background-attachment: fixed;*/
@@ -367,6 +367,15 @@ section#telechargement a {
 }
 
 @media screen and (max-width: 450px) {
+  header {
+    background-attachment: scroll;
+  }
+
+  section#pres {
+    background: #000000;
+    background-attachment: scroll;
+  }
+
   section#galery {
     padding-top: 10%;
   }

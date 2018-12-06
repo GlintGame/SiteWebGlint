@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <a href="{{ route('home') }}" class="retour">← Accueil</a>
+        <a href="{{ route('home') }}" class="retour">◄ Accueil</a>
 
         <h1>Télécharger Glint (v0.1)</h1>
         <div>
@@ -64,7 +64,7 @@
 
 
                 <label for="post_name">Nom</label>
-                <input type="text" name="given_name" placeholder="Psodonyme" id="post_name">
+                <input type="text" name="given_name" placeholder="Pseudonyme" id="post_name">
 
                 <label for="post_content">Commentaire</label>
                 <textarea placeholder=""  name="content" id="post_content" ></textarea>
