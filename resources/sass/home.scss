@@ -185,20 +185,26 @@ section#telechargement {
 @media screen and (max-width: 720px) {
     header {
         justify-content: center;
+        background-attachment: scroll;
+        height: auto;
+        min-height: 100vh;
         div {
             width: 90%;
             text-align: center;
             h1 {
-                padding: 25% 5% 50% 5%;
+                padding: 25vh 5% 20vh 5%;
             }
         }
     }
     section#pres {
+        background: #000000;
+        background-attachment: scroll;
         iframe {
             width: 90vw;
             height: 50vw;
         }
     }
+
     section#galery {
         div.contente {
             overflow: hidden;
@@ -249,13 +255,6 @@ section#telechargement {
 }
 
 @media screen and (max-width: 450px) {
-    header {
-        background-attachment: scroll;
-    }
-    section#pres {
-        background: #000000;
-        background-attachment: scroll;
-    }
     section#galery {
         padding-top: 10%;
         div.contente.active {

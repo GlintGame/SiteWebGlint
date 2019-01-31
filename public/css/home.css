@@ -309,6 +309,9 @@ section#telechargement a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    background-attachment: scroll;
+    height: auto;
+    min-height: 100vh;
   }
 
   header div {
@@ -317,7 +320,12 @@ section#telechargement a {
   }
 
   header div h1 {
-    padding: 25% 5% 50% 5%;
+    padding: 25vh 5% 20vh 5%;
+  }
+
+  section#pres {
+    background: #000000;
+    background-attachment: scroll;
   }
 
   section#pres iframe {
@@ -379,15 +387,6 @@ section#telechargement a {
 }
 
 @media screen and (max-width: 450px) {
-  header {
-    background-attachment: scroll;
-  }
-
-  section#pres {
-    background: #000000;
-    background-attachment: scroll;
-  }
-
   section#galery {
     padding-top: 10%;
   }
@@ -421,6 +420,13 @@ footer div.reseaux {
 footer div.reseaux img {
   width: 50px;
   margin: 10px;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+
+footer div.reseaux img:hover {
+  opacity: 1;
 }
 
 footer div.reseaux h2 {
@@ -438,6 +444,7 @@ footer div.groupe h2 {
 
 footer div.groupe p {
   margin: 5px;
+  opacity: 0.8;
 }
 
 div.copy {
@@ -446,15 +453,7 @@ div.copy {
   width: 100%;
   text-align: center;
   padding: 10px 5px;
-}
-
-div.copy a {
-  text-decoration: none;
-  color: #d8d8d8;
-}
-
-div.copy a:hover {
-  text-decoration: underline;
+  font-size: 0.75rem;
 }
 
 @media screen and (max-width: 550px) {

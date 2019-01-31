@@ -10,6 +10,11 @@ footer {
         img {
             width: 50px;
             margin: 10px;
+            opacity: 0.8;
+            transition: opacity 0.2s ease-in;
+        }
+        img:hover {
+            opacity: 1;
         }
 
         h2 {
@@ -26,6 +31,7 @@ footer {
 
         p {
             margin: 5px;
+            opacity: 0.8;
         }
     }
 }
@@ -35,13 +41,7 @@ div.copy {
     width: 100%;
     text-align: center;
     padding: 10px 5px;
-    a {
-        text-decoration: none;
-        color: rgb(216, 216, 216);
-    }
-    a:hover {
-        text-decoration: underline;
-    }
+    font-size: 0.75rem;
 }
 @media screen and (max-width: (550px)) {
     footer {

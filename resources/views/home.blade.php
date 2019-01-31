@@ -9,6 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:image" content="images/visusitev11.jpg" />
     <link rel="icon" type="image/png" href="img/Favicon.png"> 
     <link rel="stylesheet" href="css/home.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> 
@@ -45,8 +46,8 @@
             <img src="img/galery/croquis.jpg" alt="">
             <img src="img/galery/second.jpg" alt="">
             <img src="img/galery/speeddraw.jpg" alt="">
-            <img src="img/galery/placeholder.png" alt="placeholder">
-            <img src="img/galery/placeholder.png" alt="placeholder">
+            <img src="img/galery/Version2.jpg" alt="">
+            <img src="img/galery/marche.jpg" alt="">
         </div>
         <div class="popup">
             <a class="close">&times;</a>
@@ -73,14 +74,14 @@
             <h2>L'équipe de glint :</h2>
             
             
-            <p>Charline  -  Théo W. </p>
+            <p>Charline  -  Théo W.</p>
             <p>Marc-Antoine  -  Léon</p>
             <p>Emilien  -  Théo L.</p>
         </div>
 
         
     </footer>
-    <div class="copy">GlintGame - <a href="www.creativecommons.fr">www.creativecommons.fr</a></div>
+    <div class="copy">GlintGame - Tous droits réservés</div>
     
 
     <script>

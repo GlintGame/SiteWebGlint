@@ -83,7 +83,7 @@ a:focus {
 
 header {
   /*background: #383838;*/
-  background: url(/images/loupiote.jpg?2116c3991133c14b08432a59f5c03cc0);
+  background: url(/images/loupioteV2.jpg?b0d2c03746083d30b08b7b84253bb182);
   background-position-x: 20%;
   background-position-y: 75%;
   background-size: cover;
@@ -124,9 +124,10 @@ header a.retour {
 }
 
 header h1 {
-  margin-top: 10vh;
+  margin-top: 20vh;
   text-align: center;
   font-size: 3rem;
+  text-shadow: 0px 0px 50px black, 0px 0px 30px black, 0px 0px 15px white;
 }
 
 header h1 span {
@@ -389,6 +390,13 @@ footer div.reseaux {
 footer div.reseaux img {
   width: 50px;
   margin: 10px;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+
+footer div.reseaux img:hover {
+  opacity: 1;
 }
 
 footer div.reseaux h2 {
@@ -406,6 +414,7 @@ footer div.groupe h2 {
 
 footer div.groupe p {
   margin: 5px;
+  opacity: 0.8;
 }
 
 div.copy {
@@ -414,15 +423,7 @@ div.copy {
   width: 100%;
   text-align: center;
   padding: 10px 5px;
-}
-
-div.copy a {
-  text-decoration: none;
-  color: #d8d8d8;
-}
-
-div.copy a:hover {
-  text-decoration: underline;
+  font-size: 0.75rem;
 }
 
 @media screen and (max-width: 550px) {
