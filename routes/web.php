@@ -12,5 +12,15 @@
 */
 
 Route::get('/', 'HomeController@home')->name('home');
-Route::get('/{version}', 'HomeController@version')->name('version');
-Route::post('/{version}', 'PostController@add')->name('addPost');
+Route::get('/game/{version}', 'HomeController@version')->name('version');
+Route::post('/game/{version}', 'PostController@add')->name('addPost');
+
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/galery', function () {
+    return view('galery');
+});
+Route::get('/team', function () {
+    return view('team');
+});
