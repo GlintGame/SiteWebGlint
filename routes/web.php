@@ -18,9 +18,11 @@ Route::post('/game/{version}', 'PostController@add')->name('addPost');
 Route::get('/about', function () {
     return view('about');
 });
+
 Route::get('/galery', function () {
     return view('galery');
-});
+})->name('galery');
+
 Route::get('/team', function () {
     return view('team');
-});
+})->name('team');

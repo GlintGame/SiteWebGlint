@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -45,7 +45,7 @@
                     <a class="nav-link px-3 px-md-4" href="{{ route('galery') }}">GALERIE</a>
                 </li>
                 <li class="nav-item text-center">
-                    <a href="{{ $lastVersionRef }}"><button class="btn btn-outline-light mx-4 my-2 my-sm-0 px-4" type="link">TELECHARGER</button></a>
+                    <a href=""><button class="btn btn-outline-light mx-4 my-2 my-sm-0 px-4" type="link">TELECHARGER</button></a>
                 </li>
 
         </div>
