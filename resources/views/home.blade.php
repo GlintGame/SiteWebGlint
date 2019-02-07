@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta property="og:image" content="{{ URL::asset('images/visusitev11.jpg') }}" />
     <link rel="icon" type="image/png" href="{{ URL::asset('img/Favicon.png') }}">
-    <link rel="stylesheet" href="{{ URL::asset('css/version.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/home.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Rosario" rel="stylesheet">
     
