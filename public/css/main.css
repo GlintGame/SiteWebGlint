@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Besom";
+  src: url(/fonts/Besom.eot?592ba3bc3705e7ef1478bcd407670fe5);
+  /* IE9 Compat Modes */
+  src: url(/fonts/Besom.eot?592ba3bc3705e7ef1478bcd407670fe5) format("embedded-opentype"), url(/fonts/Besom.otf?7f3ce3236cfc73992d34a63b3d814b26) format("opentype"), url(/fonts/Besom.svg?afdc61449510b21bd91b90c0511a7546) format("svg"), url(/fonts/Besom.ttf?86b56db5ff46014b749dc4cc49df23d2) format("truetype"), url(/fonts/Besom.woff?4f14141babd2abe272e39ba4fc89632e) format("woff"), url(/fonts/Besom.woff2?9f50c157005932465e7270da8d1e28d1) format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: Rosario, sans-serif;
+}
+
+.title {
+  font-family: Besom, cursive;
+}
+
+h1.title {
+  font-size: 7rem;
+}
+
+h2.title {
+  font-size: 3rem;
+}
+
+header {
+  background: url(/images/visusitev11.jpg?39793f174cf00ac1ad497714cef9822e) no-repeat bottom;
+  background-size: cover;
+  height: 100vh;
+}
+
+p {
+  font-size: 1.15em;
+}
+
+.slogan {
+  font-size: 1.5em;
+}
+
+.bg-forest {
+  background: url(/images/forest.jpg?ccb042c10c3b3f7b3f6132c31e5cb551) no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: inset 0px 0px 200px 150px #050e05, 0px -15px 150px 100px #050e05;
+          box-shadow: inset 0px 0px 200px 150px #050e05, 0px -15px 150px 100px #050e05;
+}
+
+.bg-black {
+  background-color: #141414;
+}
+

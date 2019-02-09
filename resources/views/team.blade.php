@@ -29,8 +29,11 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
-        <a class="navbar-brand" href="#">GLINT</a>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand mx-3" href="#">
+        <img src="{{ URL::asset('img/icon-w.png') }}" width="30" height="30" alt="">
+        GLINT
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
