@@ -10,24 +10,11 @@
 
 body {
   font-family: Rosario, sans-serif;
+  background: black;
 }
 
 .title {
   font-family: Besom, cursive;
-}
-
-h1.title {
-  font-size: 7rem;
-}
-
-h2.title {
-  font-size: 3rem;
-}
-
-header {
-  background: url(/images/visusitev11.jpg?39793f174cf00ac1ad497714cef9822e) no-repeat bottom;
-  background-size: cover;
-  height: 100vh;
 }
 
 p {
@@ -38,14 +25,34 @@ p {
   font-size: 1.5em;
 }
 
-.bg-forest {
-  background: url(/images/forest.jpg?ccb042c10c3b3f7b3f6132c31e5cb551) no-repeat;
-  background-size: cover;
-  -webkit-box-shadow: inset 0px 0px 200px 150px #050e05, 0px -15px 150px 100px #050e05;
-          box-shadow: inset 0px 0px 200px 150px #050e05, 0px -15px 150px 100px #050e05;
-}
-
 .bg-black {
   background-color: #141414;
+}
+
+nav {
+  -webkit-transition: all 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  transition: all 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+img.logo {
+  width: 50px;
+  margin: 10px;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+
+img.logo:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 575px) {
+  footer div .border-right {
+    border-right: none !important;
+  }
+
+  footer div .border-left {
+    border-left: none !important;
+  }
 }
 

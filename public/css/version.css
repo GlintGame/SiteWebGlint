@@ -374,20 +374,7 @@ section#com form input[type="submit"] {
   }
 }
 
-footer {
-  background: #000000;
-  color: white;
-  padding: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-footer div.reseaux {
-  width: 50%;
-}
-
-footer div.reseaux img {
+img.logo {
   width: 50px;
   margin: 10px;
   opacity: 0.8;
@@ -395,66 +382,17 @@ footer div.reseaux img {
   transition: opacity 0.2s ease-in;
 }
 
-footer div.reseaux img:hover {
+img.logo:hover {
   opacity: 1;
 }
 
-footer div.reseaux h2 {
-  margin: 20px 10px;
-}
-
-footer div.groupe {
-  width: 50%;
-}
-
-footer div.groupe p,
-footer div.groupe h2 {
-  text-align: right;
-}
-
-footer div.groupe p {
-  margin: 5px;
-  opacity: 0.8;
-}
-
-div.copy {
-  background: black;
-  color: #d8d8d8;
-  width: 100%;
-  text-align: center;
-  padding: 10px 5px;
-  font-size: 0.75rem;
-}
-
-@media screen and (max-width: 550px) {
-  footer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+@media screen and (max-width: 575px) {
+  footer div .border-right {
+    border-right: none !important;
   }
 
-  footer div.reseaux {
-    width: initial;
-  }
-
-  footer div.reseaux h2 {
-    text-align: center;
-  }
-
-  footer div.groupe {
-    width: 100%;
-  }
-
-  footer div.groupe p,
-  footer div.groupe h2 {
-    text-align: center;
+  footer div .border-left {
+    border-left: none !important;
   }
 }
 

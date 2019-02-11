@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -10,29 +8,16 @@
     <link rel="icon" type="image/png" href="{{ URL::asset('img/Favicon.png') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Rosario" rel="stylesheet">
+    <link rel="stylesheet" href="{{ URL::asset('css/team.css') }}">
     <title>L'équipe</title>
-    <style>
-        body{
-        background: #212529;
-
-    }
-    img.logo {
-            width: 50px;
-            margin: 10px;
-            opacity: 0.8;
-            transition: opacity 0.2s ease-in;
-        }
-        img.logo:hover {
-            opacity: 1;
-        }
-    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-    <a class="navbar-brand mx-3" href="#">
-        <img src="{{ URL::asset('img/icon-w.png') }}" width="30" height="30" alt="">
-        GLINT
+    <nav class=" navbar navbar-expand-md navbar-dark bg-black sticky-top">
+        <a class="navbar-brand mx-3 title" href="#">
+            <img src="{{ URL::asset('img/icon-w.png') }}" width="30" height="30" alt="">
+            GLINT
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,94 +32,95 @@
                 <li class="nav-item text-center active">
                     <a class="nav-link px-3 px-md-4" href="{{ route('team') }}">L'EQUIPE</a>
                 </li>
-                <li class="nav-item text-center">
+                <li class="nav-item text-center ">
                     <a class="nav-link px-3 px-md-4" href="{{ route('galery') }}">GALERIE</a>
                 </li>
-                <li class="nav-item text-center">
+                <li class="nav-item text-center active">
                     <a href=""><button class="btn btn-outline-light mx-4 my-2 my-sm-0 px-4" type="link">TELECHARGER</button></a>
                 </li>
 
         </div>
     </nav>
     <main class="container-fluid d-flex justify-content-center align-items-center flex-column">
-        <h1 class="text-center text-light display-2 m-4">L'équipe</h1>
+        <h1 class="text-center text-light display-2 m-4 title">L'équipe</h1>
         <picture class="d-flex justify-content-center align-items-center">
             <source media="(max-width: 720px)" srcset="https://via.placeholder.com/1600x900">
 
-            <img src="https://via.placeholder.com/2400x900" class="img-fluid mb-4" style="width:100%; max-width:90rem" alt="">
+            <img src="https://via.placeholder.com/2400x900" class="img-fluid mb-4" style="width:100%; max-width:90rem"
+                alt="">
         </picture>
 
-        <div class="card-deck justify-content-md-around align-items-center" style="max-width:78.9rem">
+        <div class="card-deck justify-content-center align-items-center" style="max-width:78.9rem">
 
-            <div class="card bg-light m-md-5 m-3" style="max-width: 20rem; min-width:18rem;" >
-                <img src="https://via.placeholder.com/160x120" class="card-img-top" alt="...">
+            <div class="card bg-light m-md-5 m-3" style="max-width: 20rem; min-width:18rem;">
+                <img src="https://via.placeholder.com/160x90" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title mb-0">Théo Wavrin</h5>
-                    <p class="card-text"><small class="text-muted">Product-owner</small></p>
+                    <p class="card-text"><small class="text-muted">Product-owner / Community manager </small></p>
                     <p class="card-text mb-3">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
                 </div>
             </div>
 
-            <div class="card bg-light m-md-5 m-3" style="max-width: 20rem; min-width:18rem;" >
-                <img src="https://via.placeholder.com/160x120" class="card-img-top" alt="...">
+            <div class="card bg-light m-md-5 m-3" style="max-width: 20rem; min-width:18rem;">
+                <img src="{{URL::asset('img/Emilien.jpg')}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title mb-0">Théo Wavrin</h5>
-                    <p class="card-text"><small class="text-muted">Product-owner</small></p>
+                    <h5 class="card-title mb-0">Emilien Vandevelde</h5>
+                    <p class="card-text"><small class="text-muted">Scrum-master / Dévelopeur front-end</small></p>
                     <p class="card-text mb-3">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
                 </div>
             </div>
 
-            <div class="card bg-light m-md-5 m-3" style="max-width: 20rem; min-width:18rem;" >
-                <img src="https://via.placeholder.com/160x120" class="card-img-top" alt="...">
+            <div class="card bg-light m-md-5 m-3" style="max-width: 20rem; min-width:18rem;">
+                <img src="{{URL::asset('img/Charline.jpg')}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title mb-0">Théo Wavrin</h5>
-                    <p class="card-text"><small class="text-muted">Product-owner</small></p>
+                    <h5 class="card-title mb-0">Charline Mestraletti</h5>
+                    <p class="card-text"><small class="text-muted">Graphiste</small></p>
                     <p class="card-text mb-3">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
                 </div>
             </div>
 
-            <div class="card bg-light m-md-5 m-3" style="max-width: 20rem; min-width:18rem;" >
-                <img src="https://via.placeholder.com/160x120" class="card-img-top" alt="...">
+            <div class="card bg-light m-md-5 m-3" style="max-width: 20rem; min-width:18rem;">
+                <img src="{{URL::asset('img/TheoL.jpg')}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title mb-0">Théo Wavrin</h5>
-                    <p class="card-text"><small class="text-muted">Product-owner</small></p>
+                    <h5 class="card-title mb-0">Théo Lemoine</h5>
+                    <p class="card-text"><small class="text-muted">Développeur Unity / Développeur Back-end</small></p>
                     <p class="card-text mb-3">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
                 </div>
             </div>
 
-            <div class="card bg-light m-md-5 m-3" style="max-width: 20rem; min-width:18rem;" >
-                <img src="https://via.placeholder.com/160x120" class="card-img-top" alt="...">
+            <div class="card bg-light m-md-5 m-3" style="max-width: 20rem; min-width:18rem;">
+                <img src="{{URL::asset('img/Marc.jpg')}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title mb-0">Théo Wavrin</h5>
-                    <p class="card-text"><small class="text-muted">Product-owner</small></p>
+                    <h5 class="card-title mb-0">Marc-Antoire Feriaux</h5>
+                    <p class="card-text"><small class="text-muted">Graphiste / Sound-designer</small></p>
                     <p class="card-text mb-3">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
                 </div>
             </div>
 
-            <div class="card bg-light m-md-5 m-3" style="max-width: 20rem; min-width:18rem;" >
-                <img src="https://via.placeholder.com/160x120" class="card-img-top" alt="...">
+            <div class="card bg-light m-md-5 m-3" style="max-width: 20rem; min-width:18rem;">
+                <img src="{{URL::asset('img/Leon.jpg')}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title mb-0">Théo Wavrin</h5>
-                    <p class="card-text"><small class="text-muted">Product-owner</small></p>
+                    <h5 class="card-title mb-0">Léon Baudouin</h5>
+                    <p class="card-text"><small class="text-muted">Développeur Unity</small></p>
                     <p class="card-text mb-3">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
                 </div>
             </div>
-            
+
 
         </div>
-        
-        
+
+
 
 
 
     </main>
-    <footer class="container-fluid bg-dark mt-5">
+    <footer class="container-fluid mt-5">
         <div class="row py-5">
             <div class="col-sm-6 m-3 m-sm-0 text-light text-center border-right">
                 <h2 class="mb-4">Retrouvez nous sur :</h2>
@@ -145,14 +131,14 @@
             <div class="col-sm-6  m-3 m-sm-0 text-light text-center border-left">
                 <h2 class="mb-4">L'équipe de glint :</h2>
 
-                <p class="mb-0">Charline  -  Théo W. </p>
-                <p class="mb-0">Marc-Antoine  -  Léon</p>
-                <p class="mb-0">Emilien  -  Théo L.</p>
+                <p class="mb-0">Charline - Théo W. </p>
+                <p class="mb-0">Marc-Antoine - Léon</p>
+                <p class="mb-0">Emilien - Théo L.</p>
             </div>
-            
+
         </div>
         <div class="row">
-        <div class="col-12 text-light text-center bg-secondary"> Glint - Tous droit reserve</div>
+            <div class="col-12 text-light text-center bg-black"> Glint - Tous droit reserve</div>
         </div>
     </footer>
 

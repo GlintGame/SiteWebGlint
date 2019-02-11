@@ -56,24 +56,44 @@ img.logo:hover {
   }
 }
 
-header {
-  background: url(/images/visusitev11.jpg?39793f174cf00ac1ad497714cef9822e) no-repeat left 10% bottom;
-  background-size: cover;
-  height: 100vh;
-}
-
-.bg-forest {
-  background: url(/images/forest.jpg?ccb042c10c3b3f7b3f6132c31e5cb551) no-repeat;
-  background-size: cover;
-  -webkit-box-shadow: inset 0px 0px 200px 150px #050e05, 0px -15px 150px 100px #050e05;
-          box-shadow: inset 0px 0px 200px 150px #050e05, 0px -15px 150px 100px #050e05;
-}
-
 h1.title {
-  font-size: 7rem;
+  font-size: 4rem;
 }
 
-h2.title {
-  font-size: 3rem;
+.img-fluid {
+  cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  background: #a7a7a780;
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+.popup img {
+  width: 99%;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.popup.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 

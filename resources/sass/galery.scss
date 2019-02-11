@@ -1,0 +1,32 @@
+@import "main";
+h1.title{
+    font-size: 4rem;
+}
+.img-fluid{
+    cursor: pointer;
+}
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    background: #a7a7a780;
+    display: none;
+    height: 100%;
+    width: 100%;
+
+    img{
+        width: 99%;
+    }
+    
+    .close{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+.popup.active{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
