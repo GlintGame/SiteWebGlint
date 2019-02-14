@@ -44,7 +44,7 @@
     <main class="container-fluid px-xl-5">
         <section class="row text-light my-3 mt-4 align-items-center">
             <div class="col-md-6 col-12 my-4 order-md-2">
-                <h1 class="text-center mb-5 title">Galerie</h1>
+                <h1 class="text-center mb-5 title deco">Galerie</h1>
                 <p class="mx-lg-5 mx-3 pt-xl-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi esse
                     vitae
                     consequuntur adipisci nostrum quis temporibus, quos atque dignissimos minus libero impedit eos aut
@@ -57,22 +57,22 @@
         <section class="row my-3">
 
             <div class="col-sm-6 col-md-4 my-3 my-md-4">
-                <img src="https://via.placeholder.com/1600x900" class="img-fluid" alt="">
+                <img src="{{ URL::asset('img/galery/croquis.jpg') }}" class="img-fluid" alt="">
             </div>
             <div class="col-sm-6 col-md-4 my-3 my-md-4">
-                <img src="https://via.placeholder.com/1600x900" class="img-fluid" alt="">
+                <img src="{{ URL::asset('img/galery/marche.jpg') }}" class="img-fluid" alt="">
             </div>
             <div class="col-sm-6 col-md-4 my-3 my-md-4">
-                <img src="https://via.placeholder.com/1600x900" class="img-fluid" alt="">
+                <img src="{{ URL::asset('img/galery/second.jpg') }}" class="img-fluid" alt="">
             </div>
             <div class="col-sm-6 col-md-4 my-3 my-md-4">
-                <img src="https://via.placeholder.com/1600x900" class="img-fluid" alt="">
+                <img src="{{ URL::asset('img/galery/speeddraw.jpg') }}" class="img-fluid" alt="">
             </div>
             <div class="col-sm-6 col-md-4 my-3 my-md-4">
-                <img src="https://via.placeholder.com/1600x900" class="img-fluid" alt="">
+                <img src="{{ URL::asset('img/galery/Version2.jpg') }}" class="img-fluid" alt="">
             </div>
             <div class="col-sm-6 col-md-4 my-3 my-md-4">
-                <img src="https://via.placeholder.com/1600x900" class="img-fluid" alt="">
+                <img src="{{ URL::asset('img/galery/team.jpg') }}" class="img-fluid" alt="">
             </div>
         </section>
     </main>
@@ -86,9 +86,9 @@
         <div class="row py-5">
             <div class="col-sm-6 m-3 m-sm-0 text-light text-center border-right">
                 <h2 class="mb-4">Retrouvez nous sur :</h2>
-                <a href="https://www.facebook.com/glintgame"><img class="logo" src="img/facebook.svg" alt="facebook"></a>
-                <a href="https://twitter.com/glintgame"><img class="logo" src="img/twitter.svg" alt="twitter"></a>
-                <a href="https://www.instagram.com/glintgame/"><img class="logo" src="img/instagram.svg" alt="instagram"></a>
+                <a href="https://www.facebook.com/glintgame" target="_blank"><img class="logo" src="img/facebook.svg" alt="facebook"></a>
+                <a href="https://twitter.com/glintgame" target="_blank"><img class="logo" src="img/twitter.svg" alt="twitter"></a>
+                <a href="https://www.instagram.com/glintgame/" target="_blank"><img class="logo" src="img/instagram.svg" alt="instagram"></a>
             </div>
             <div class="col-sm-6  m-3 m-sm-0 text-light text-center border-left">
                 <h2 class="mb-4">L'équipe de glint :</h2>

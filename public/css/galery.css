@@ -8,6 +8,17 @@
   font-style: normal;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Rosario, sans-serif;
   background: black;
@@ -19,6 +30,24 @@ body {
 
 p {
   font-size: 1.15em;
+}
+
+.deco::after {
+  content: url(/images/Deco-1.svg?b3c0a74ad48aacc8fd96e52490e0fbb3);
+  display: inline-block;
+  width: 150px;
+  position: relative;
+  bottom: 10px;
+  left: 50px;
+}
+
+.deco::before {
+  content: url(/images/Deco-2.svg?5818756cdc0b2be6763c9d7ab609ebd8);
+  display: inline-block;
+  width: 150px;
+  position: relative;
+  bottom: 10px;
+  left: -50px;
 }
 
 .slogan {
@@ -95,5 +124,47 @@ h1.title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 1400px) {
+  .deco::after {
+    width: 120px;
+  }
+
+  .deco::before {
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 1125px) {
+  .deco::after {
+    content: none;
+  }
+
+  .deco::before {
+    content: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .deco::after {
+    content: url(/images/Deco-1.svg?b3c0a74ad48aacc8fd96e52490e0fbb3);
+    width: 120px;
+  }
+
+  .deco::before {
+    content: url(/images/Deco-2.svg?5818756cdc0b2be6763c9d7ab609ebd8);
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .deco::after {
+    content: none;
+  }
+
+  .deco::before {
+    content: none;
+  }
 }
 

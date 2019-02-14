@@ -30,3 +30,43 @@ h1.title{
     justify-content: center;
     align-items: center
 }
+
+@media screen and (max-width: 1400px){
+    .deco::after{
+        width: 120px;
+    }
+    
+    .deco::before{
+        width: 120px;
+    }
+    }
+@media screen and (max-width: 1125px){
+    .deco::after{
+        content: none;
+    }
+    
+    .deco::before{
+        content: none;
+    }
+    }
+@media screen and (max-width: 767px){
+    .deco::after{
+        content: url(../../public/img/Deco-1.svg);
+        width: 120px;
+    }
+    
+    .deco::before{
+        content: url(../../public/img/Deco-2.svg);
+        width: 120px;
+    }
+    }
+    
+    @media screen and (max-width: 550px){
+        .deco::after{
+            content: none;
+        }
+        
+        .deco::before{
+            content: none;
+        }
+        }

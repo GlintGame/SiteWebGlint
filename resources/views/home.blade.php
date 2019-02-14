@@ -39,22 +39,23 @@
                 <li class="nav-item text-center ">
                     <a class="nav-link px-3 px-md-4" href="{{ route('galery') }}">GALERIE</a>
                 </li>
-                <li class="nav-item text-center active">
+                <li class="nav-item text-center ">
                     <a href="{{$lastVersionRef}}"><button class="btn btn-outline-light mx-4 my-2 my-sm-0 px-4" type="link">TELECHARGER</button></a>
                 </li>
 
         </div>
     </nav>
+    
     <header class="d-flex justify-content-center align-items-center">
         <h1 class="title text-light">Glint</h1>
     </header>
 
-    <section class="container text-light px-lg-5" style="position: relative; top: -10vh;">
+    <section class="container text-light px-lg-5" style="position: relative; top: -15vh;">
         <div class="embed-responsive embed-responsive-16by9 bg-black">
-            <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/sLFLuvwOTOY"
+            <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/EvZuMWqrfg4"
                 allowfullscreen></iframe>
         </div>
-        <h2 class="title text-center text-uppercase my-5">a propos</h2>
+        <h2 class="title text-center text-uppercase my-5 deco">a propos</h2>
         <div class="row justify-content-center">
             <p class=" col-md-10 px-lg-5"> Dans un monde rongé par le mal, naît une flamme parmi les ombres. Son destin
                 : le sauver de la malédiction. <br>
@@ -65,10 +66,10 @@
     </section>
 
     <section class="container-fluid text-light bg-forest">
-        <div class="row flex-column justify-content-center align-items-center" style="min-height:80vh">
+        <div class="row flex-column justify-content-center align-items-center" style="min-height:70vh">
             <p class=" col-12 text-center p-3 p-lg-5 slogan">Envie de vous lancer dans l’aventure ? <br> De contribuer
                 au développement du jeu ? <br> Téléchargez, jouez, commentez !</p>
-            <button type="button" class="btn btn-outline-light btn-lg">Télecharger le jeu</button>
+            <a href="{{$lastVersionRef}}"><button class="btn btn-outline-light btn-lg px-4" type="link">Télecharger le jeu</button></a>
         </div>
     </section>
 
@@ -76,9 +77,9 @@
         <div class="row py-5">
             <div class="col-sm-6 m-3 m-sm-0 text-light text-center border-right">
                 <h2 class="mb-4">Retrouvez nous sur :</h2>
-                <a href="https://www.facebook.com/glintgame"><img class="logo" src="img/facebook.svg" alt="facebook"></a>
-                <a href="https://twitter.com/glintgame"><img class="logo" src="img/twitter.svg" alt="twitter"></a>
-                <a href="https://www.instagram.com/glintgame/"><img class="logo" src="img/instagram.svg" alt="instagram"></a>
+                <a href="https://www.facebook.com/glintgame" target="_blank"><img class="logo" src="img/facebook.svg" alt="facebook"></a>
+                <a href="https://twitter.com/glintgame" target="_blank"><img class="logo" src="img/twitter.svg" alt="twitter"></a>
+                <a href="https://www.instagram.com/glintgame/" target="_blank"><img class="logo" src="img/instagram.svg" alt="instagram"></a>
             </div>
             <div class="col-sm-6  m-3 m-sm-0 text-light text-center border-left">
                 <h2 class="mb-4">L'équipe de glint :</h2>
@@ -103,10 +104,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 </body>
-
-</html>
-
-
 <script>
     var nav = document.querySelector("nav.navbar");
     window.addEventListener('scroll', function () {
@@ -123,6 +120,5 @@
 
 </script>
 
-</body>
-
 </html>
+

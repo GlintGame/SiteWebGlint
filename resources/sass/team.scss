@@ -1,1 +1,37 @@
 @import "main";
+.card{
+    border: none;
+}
+
+h1.title{
+    font-size: 4rem;
+}
+
+div a{
+    text-decoration: none;
+    color:black;
+}
+div a:hover{
+    text-decoration: none;
+    color:black;
+}
+
+@media screen and (max-width: 800px){
+.deco::after{
+    width: 120px;
+}
+
+.deco::before{
+    width: 120px;
+}
+}
+
+@media screen and (max-width: 550px){
+    .deco::after{
+        content: none;
+    }
+    
+    .deco::before{
+        content: none;
+    }
+    }

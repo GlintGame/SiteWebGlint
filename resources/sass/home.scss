@@ -16,3 +16,25 @@ h1.title{
 h2.title{
     font-size: 3rem;
 }
+@media screen and (max-width: 800px){
+    .deco::after{
+        width: 120px;
+    }
+    
+    .deco::before{
+        width: 120px;
+    }
+    }
+    
+    @media screen and (max-width: 550px){
+        .deco::after{
+            content: none;
+        }
+        
+        .deco::before{
+            content: none;
+        }
+        .bg-forest{
+            box-shadow: inset 0px 0px 150px 100px #050e05, 0px -15px 100px 100px #050e05;
+        }
+        }
