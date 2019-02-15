@@ -12,17 +12,8 @@
 */
 
 Route::get('/', 'HomeController@home')->name('home');
+Route::get('/galery', 'HomeController@galery')->name('galery');
+Route::get('/team', 'HomeController@team')->name('team');
+
 Route::get('/game/{version}', 'HomeController@version')->name('version');
 Route::post('/game/{version}', 'PostController@add')->name('addPost');
-
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/galery', function () {
-    return view('galery');
-})->name('galery');
-
-Route::get('/team', function () {
-    return view('team');
-})->name('team');
