@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    <main class="container-fluid d-flex justify-content-center align-items-center flex-column mt-5">
+    <main class="container-fluid d-flex justify-content-center align-items-center flex-column mt-3">
         <h1 class="text-center text-light m-4 title deco">L'équipe</h1>
         <!-- <picture class="d-flex justify-content-center align-items-center">
             <source media="(max-width: 720px)" srcset="https://via.placeholder.com/1600x900">

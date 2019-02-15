@@ -15,6 +15,12 @@ div a:hover{
     text-decoration: none;
     color:black;
 }
+nav.fixed-top{
+    position: sticky;
+}
+nav{
+    background: #111111;
+}
 
 @media screen and (max-width: 800px){
 .deco::after{

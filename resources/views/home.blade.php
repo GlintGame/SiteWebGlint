@@ -10,10 +10,11 @@
 
     <header class="d-flex justify-content-center align-items-center">
         <h1 class="title text-light">Glint</h1>
+        <img src="{{ URL::asset('img/glint-title.png') }}" alt="" class="title">
     </header>
 
     <section class="container text-light px-lg-5" style="position: relative; top: -15vh;">
-        <div class="embed-responsive embed-responsive-16by9 bg-black">
+        <div class="embed-responsive video-iframe embed-responsive-16by9 bg-black">
             <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/EvZuMWqrfg4"
                 allowfullscreen></iframe>
         </div>
