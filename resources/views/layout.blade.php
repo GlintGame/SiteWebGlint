@@ -27,13 +27,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item text-center">
-                <a class="nav-link px-3 px-md-4" href="{{ route('home') }}">ACCUIEL</a>
+                <a class="nav-link px-3 px-md-4 {{ $page_name === 'home' ? 'active' : ''}}" href="{{ route('home') }}">ACCUIEL</a>
             </li>
             <li class="nav-item text-center">
-                <a class="nav-link px-3 px-md-4" href="{{ route('team') }}">L'EQUIPE</a>
+                <a class="nav-link px-3 px-md-4 {{ $page_name === 'team' ? 'active' : ''}}" href="{{ route('team') }}">L'EQUIPE</a>
             </li>
             <li class="nav-item text-center">
-                <a class="nav-link px-3 px-md-4" href="{{ route('galery') }}">GALERIE</a>
+                <a class="nav-link px-3 px-md-4 {{ $page_name === 'galery' ? 'active' : ''}}" href="{{ route('galery') }}">GALERIE</a>
             </li>
             <li class="nav-item text-center">
                 <a href="{{ route('addPost', ['version' => $version_name])  }}"><button class="btn btn-outline-light mx-4 my-2 my-sm-0 px-4" type="link">TELECHARGER</button></a>

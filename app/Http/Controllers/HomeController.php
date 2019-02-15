@@ -14,21 +14,30 @@ class HomeController extends Controller
     {
         $version = Version::orderBy('created_at')->first();
         
-        return view('home', ['version_name' => $version->name]);
+        return view('home', [
+            'version_name' => $version->name,
+            'page_name' => 'home',
+        ]);
     }
 
     public function team()
     {
         $version = Version::orderBy('created_at')->first();
 
-        return view('team', ['version_name' => $version->name]);
+        return view('team', [
+            'version_name' => $version->name,
+            'page_name' => 'team'
+        ]);
     }
 
     public function galery()
     {
         $version = Version::orderBy('created_at')->first();
 
-        return view('galery', ['version_name' => $version->name]);
+        return view('galery', [
+            'version_name' => $version->name,
+            'page_name' => 'galery'
+        ]);
     }
 
     // give a specific version of the game
@@ -45,6 +54,11 @@ class HomeController extends Controller
             return view('error', ['message' => 'Cette version du jeu n\'existe pas', 'background' => '404']);
         }
 
-        return view('version', ['version' => $version, 'posts' => $posts, 'version_name' => $version->name]);
+        return view('version', [
+            'version' => $version,
+            'posts' => $posts,
+            'version_name' => $version->name,
+            'page_name' => 'version'
+        ]);
     }
 }
