@@ -12,7 +12,7 @@ class HomeController extends Controller
 
     public function home()
     {
-        $version = Version::orderBy('created_at')->first();
+        $version = Version::orderBy('created_at', 'desc')->first();
         
         return view('home', [
             'version_name' => $version->name,
@@ -22,7 +22,7 @@ class HomeController extends Controller
 
     public function team()
     {
-        $version = Version::orderBy('created_at')->first();
+        $version = Version::orderBy('created_at', 'desc')->first();
 
         return view('team', [
             'version_name' => $version->name,
@@ -32,7 +32,7 @@ class HomeController extends Controller
 
     public function galery()
     {
-        $version = Version::orderBy('created_at')->first();
+        $version = Version::orderBy('created_at', 'desc')->first();
 
         return view('galery', [
             'version_name' => $version->name,
@@ -43,7 +43,7 @@ class HomeController extends Controller
     // give a specific version of the game
     public function version(string $versionName)
     {
-        $version =  Version::where('name', $versionName)->first();
+        $version = Version::where('name', $versionName)->first();
 
         $posts = Post::where('version_id', $version->id)
                         ->orderBy('CREATED_AT', 'DESC')

@@ -15,7 +15,7 @@
 
 <body>
 <nav class=" navbar navbar-expand-md navbar-dark fixed-top">
-    <a class="navbar-brand mx-3 title" href="#">
+    <a class="navbar-brand mx-3 title" href="{{ route('home') }}">
         <img src="{{ URL::asset('img/icon-w.png') }}" width="30" height="30" alt="">
         GLINT
     </a>
