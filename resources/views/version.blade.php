@@ -5,9 +5,11 @@
 @section('head')
     <link rel="stylesheet" href="{{ URL::asset('css/version.css') }}">
     <style>
-        /* met l'image dans version/'le nom de la version' et utilise ca pour obtenir le lien de l'image
-            {{ URL::asset('img/version/' . $version->url . '.jpeg') }}
-         */
+        header{
+            background: url({{ URL::asset('img/version/' . $version->url . '.jpg') }}) center left ;
+            background-size: cover;
+        }
+        
     </style>
 @endsection
 
@@ -17,7 +19,7 @@
         <div class="col-12 col-md-7 my-5 d-flex flex-column justify-content-around align-items-center">
             <h1 class="text-center my-5">
                 <span class="title" >Télécharger Glint</span> <br>
-                <span class="subtitle">Version Beta 0.1</span>
+                <span class="subtitle">Version Beta {{ $version->name }}</span>
             </h1>
 
             <a href="game_version/{{ $version->url }}/glint_win.zip" class="download" download>

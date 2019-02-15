@@ -103,6 +103,15 @@ div a:hover {
   color: black;
 }
 
+nav.fixed-top {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+nav {
+  background: #111111;
+}
+
 @media screen and (max-width: 800px) {
   .deco::after {
     width: 120px;

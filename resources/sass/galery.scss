@@ -25,6 +25,16 @@ h1.title{
         right: 20px;
     }
 }
+nav.fixed-top{
+    position: sticky;
+}
+nav{
+    background: #111111;
+}
+.img-fluid{
+    box-shadow: rgba(43, 43, 43, 0.5) 0px 0px 50px 0px
+}
+
 .popup.active{
     display: flex;
     justify-content: center;

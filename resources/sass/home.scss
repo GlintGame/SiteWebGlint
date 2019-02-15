@@ -11,11 +11,23 @@ header{
 }
 h1.title{
     font-size: 7rem;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+}
+img.title{
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 5rem;
 }
 
 h2.title{
     font-size: 3rem;
 }
+.video-iframe{
+    box-shadow: rgba(75, 57, 29, 0.4) 0 0 100px 10px;
+}
+
 @media screen and (max-width: 800px){
     .deco::after{
         width: 120px;
@@ -29,6 +41,12 @@ h2.title{
     @media screen and (max-width: 550px){
         .deco::after{
             content: none;
+        }
+        .slogan{
+            font-size: 1.25em;
+        }
+        img.title{
+            margin-bottom: 0;
         }
         
         .deco::before{
