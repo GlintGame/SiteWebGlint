@@ -4,6 +4,11 @@
 
 @section('head')
     <link rel="stylesheet" href="{{ URL::asset('css/version.css') }}">
+    <style>
+        /* met l'image dans version/'le nom de la version' et utilise ca pour obtenir le lien de l'image
+            {{ URL::asset('img/version/' . $version->url . '.jpeg') }}
+         */
+    </style>
 @endsection
 
 @section('content')
