@@ -61,6 +61,16 @@ a.button:hover {
   }
 }
 
+@font-face {
+  font-family: "Besom";
+  src: url(/fonts/Besom.eot?592ba3bc3705e7ef1478bcd407670fe5);
+  /* IE9 Compat Modes */
+  src: url(/fonts/Besom.eot?592ba3bc3705e7ef1478bcd407670fe5) format("embedded-opentype"), url(/fonts/Besom.otf?7f3ce3236cfc73992d34a63b3d814b26) format("opentype"), url(/fonts/Besom.svg?afdc61449510b21bd91b90c0511a7546) format("svg"), url(/fonts/Besom.ttf?86b56db5ff46014b749dc4cc49df23d2) format("truetype"), url(/fonts/Besom.woff?4f14141babd2abe272e39ba4fc89632e) format("woff"), url(/fonts/Besom.woff2?9f50c157005932465e7270da8d1e28d1) format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -70,11 +80,72 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: Rosario, sans-serif;
 }
 
 body {
-  background: #000;
+  font-family: Rosario, sans-serif;
+  background: black;
+}
+
+.title {
+  font-family: Besom, cursive;
+}
+
+p {
+  font-size: 1.15em;
+}
+
+.deco::after {
+  content: url(/images/Deco-1.svg?b3c0a74ad48aacc8fd96e52490e0fbb3);
+  display: inline-block;
+  width: 150px;
+  position: relative;
+  bottom: 10px;
+  left: 50px;
+}
+
+.deco::before {
+  content: url(/images/Deco-2.svg?5818756cdc0b2be6763c9d7ab609ebd8);
+  display: inline-block;
+  width: 150px;
+  position: relative;
+  bottom: 10px;
+  left: -50px;
+}
+
+.slogan {
+  font-size: 1.5em;
+}
+
+.bg-black {
+  background-color: #141414;
+}
+
+nav {
+  -webkit-transition: all 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  transition: all 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+img.logo {
+  width: 50px;
+  margin: 10px;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+
+img.logo:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 575px) {
+  footer div .border-right {
+    border-right: none !important;
+  }
+
+  footer div .border-left {
+    border-left: none !important;
+  }
 }
 
 a:focus {
@@ -82,107 +153,42 @@ a:focus {
 }
 
 header {
-  /*background: #383838;*/
-  background: url(/images/loupioteV2.jpg?b0d2c03746083d30b08b7b84253bb182);
-  background-position-x: 20%;
-  background-position-y: 75%;
+  background: url(/images/loupioteV2.jpg?b0d2c03746083d30b08b7b84253bb182) center;
   background-size: cover;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: white;
-  /*box-shadow: 0 -175px 140px -30px #111111 inset;*/
-  padding-bottom: 5%;
-  height: 100vh;
+  height: 80vh;
 }
 
-header a.retour {
+.title {
+  font-size: 1.25em;
+  line-height: 0.75;
+}
+
+.subtitle {
+  font-size: 0.75em;
+  opacity: 0.8;
+  line-height: 0.75;
+}
+
+a.download {
   text-decoration: none;
-  font-size: 1.5rem;
-}
-
-header a.button {
-  border: none;
-}
-
-header a.retour {
-  position: absolute;
-  top: 4%;
-  left: 3%;
   color: white;
+  font-size: 1.1em;
 }
 
-header h1 {
-  margin-top: 20vh;
-  text-align: center;
-  font-size: 3rem;
-  text-shadow: 0px 0px 50px black, 0px 0px 30px black, 0px 0px 15px white;
-}
-
-header h1 span {
-  font-size: 2rem;
-  color: rgba(245, 245, 245, 0.7);
-}
-
-header p {
-  width: 50%;
-  text-align: center;
-  padding: 3% 10px;
-}
-
-header div {
-  margin: 5% 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-header div a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-header div a img {
+a.download img {
   width: 50px;
+  margin: 10px;
 }
 
-header div a p {
-  width: 100%;
-  margin: 5px;
+a.download:hover {
+  text-decoration: none;
+  color: white;
+  opacity: 0.8;
 }
 
 section#changelog {
   background: #000;
-  padding: 10% 8%;
+  padding: 5% 8%;
   color: white;
 }
 
@@ -359,40 +365,5 @@ section#com form input[type="submit"] {
   background: none;
   border: none;
   margin: 20px;
-}
-
-@media screen and (max-width: 600px) {
-  header div a {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-
-  header div a p {
-    margin: 0 30px;
-  }
-}
-
-img.logo {
-  width: 50px;
-  margin: 10px;
-  opacity: 0.8;
-  -webkit-transition: opacity 0.2s ease-in;
-  transition: opacity 0.2s ease-in;
-}
-
-img.logo:hover {
-  opacity: 1;
-}
-
-@media screen and (max-width: 575px) {
-  footer div .border-right {
-    border-right: none !important;
-  }
-
-  footer div .border-left {
-    border-left: none !important;
-  }
 }
 

@@ -1,4 +1,14 @@
 @import "fonts";
+*{
+    box-sizing: border-box;
+}
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     font-family: Rosario, sans-serif;
     background: black;
@@ -6,8 +16,29 @@ body{
 .title{
     font-family: Besom, cursive;
 }
+    
 p{
     font-size: 1.15em;
+}
+
+.deco::after{
+    content: url(../../public/img/Deco-1.svg);
+    display: inline-block;
+    width: 150px;
+    position: relative;
+    bottom: 10px;
+    left: 50px;
+
+}
+
+.deco::before{
+    content: url(../../public/img/Deco-2.svg);
+    display: inline-block;
+    width: 150px;
+    position: relative;
+    bottom: 10px;
+    left: -50px;
+
 }
 
 .slogan{
@@ -20,4 +51,5 @@ p{
 nav{
     transition: all 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
+
 @import "footer";

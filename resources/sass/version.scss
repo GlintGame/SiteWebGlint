@@ -1,94 +1,43 @@
 @import "fonts";
 @import "button";
-* {
-    box-sizing: border-box;
-}
-html,
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Rosario, sans-serif;
-}
-body {
-    background: #000;
-}
+@import "main";
+
 a:focus {
     outline: rgba(255, 255, 255, 0.212) solid 1.5px;
 }
 header {
-    /*background: #383838;*/
-    background: url(../img/loupioteV2.jpg);
-    background-position-x: 20%;
-    background-position-y: 75%;
+    background: url(../img/loupioteV2.jpg) center;
     background-size: cover;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    height: 80vh;
+}
+.title{
+    font-size: 1.25em;
+    line-height: 0.75;
+}
+.subtitle{
+    font-size: 0.75em;
+    opacity: 0.8;
+    line-height: 0.75;
+}
+a.download{
+    text-decoration: none;
     color: white;
-    /*box-shadow: 0 -175px 140px -30px #111111 inset;*/
-    padding-bottom: 5%;
-    height: 100vh;
-    a.retour {
-        text-decoration: none;
-        font-size: 1.5rem;
-    }
-    a.button {
-        border: none;
-    }
+    font-size: 1.1em;
+    img{
+        width: 50px;
+        margin: 10px;
 
-    a.retour {
-        position: absolute;
-        top: 4%;
-        left: 3%;
-        color: white;
     }
-    h1 {
-        margin-top: 20vh;
-        text-align: center;
-        font-size: 3rem;
-        text-shadow: 0px 0px 50px rgb(0, 0, 0), 0px 0px 30px rgb(0, 0, 0),
-            0px 0px 15px white;
-
-        span {
-            font-size: 2rem;
-            color: rgba(245, 245, 245, 0.7);
-        }
-    }
-    p {
-        width: 50%;
-        text-align: center;
-        padding: 3% 10px;
-    }
-
-    div {
-        margin: 5% 0;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-
-        a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-
-            img {
-                width: 50px;
-            }
-            p {
-                width: 100%;
-                margin: 5px;
-            }
-        }
-    }
+}
+a.download:hover{
+    text-decoration: none;
+    color: white;
+    opacity: 0.8;
 }
 
 section#changelog {
     background: #000;
-    padding: 10% 8%;
+    padding: 5% 8%;
     color: white;
 
     details {
@@ -220,17 +169,3 @@ section#com {
         }
     }
 }
-
-@media screen and (max-width: 600px) {
-    header {
-        div {
-            a {
-                flex-direction: row;
-                p {
-                    margin: 0 30px;
-                }
-            }
-        }
-    }
-}
-@import "footer";
