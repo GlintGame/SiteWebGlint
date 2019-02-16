@@ -8,7 +8,7 @@
 
 @section('content')
 
-    <header class="d-flex justify-content-center align-items-center">
+    <header class="d-flex justify-content-center align-items-center flex-column">
         <h1 class="title text-light">Glint</h1>
         <img src="{{ URL::asset('img/glint-title.png') }}" alt="" class="title">
     </header>

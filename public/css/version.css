@@ -85,6 +85,7 @@ body {
 body {
   font-family: Rosario, sans-serif;
   background: black;
+  min-height: 100vh;
 }
 
 .title {
@@ -160,11 +161,13 @@ header {
 .title {
   font-size: 1.25em;
   line-height: 0.75;
+  text-shadow: 0px 0px 50px black, 0px 0px 30px black, 0px 0px 15px white;
 }
 
 .subtitle {
   font-size: 0.75em;
   opacity: 0.8;
+  text-shadow: 0px 0px 50px black, 0px 0px 30px black, 0px 0px 15px white;
   line-height: 0.75;
 }
 
@@ -364,5 +367,13 @@ section#com form input[type="submit"] {
   background: none;
   border: none;
   margin: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  nav.fixed-top {
+    background: #111111;
+    position: -webkit-sticky;
+    position: sticky;
+  }
 }
 

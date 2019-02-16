@@ -14,7 +14,8 @@
 @endsection
 
 @section('content')
-    <header class="row text-light">
+    <div class="container-fluid">
+<header class="row text-light">
         <div class="col-12 col-md-5"></div>
         <div class="col-12 col-md-7 my-5 d-flex flex-column justify-content-around align-items-center">
             <h1 class="text-center my-5">
@@ -34,9 +35,9 @@
                 <img src="{{ URL::asset('img/logos/linux.svg') }}" alt="">
                 Télécharger la version Linux
             </a>
-        </div>
+        
     </header>
-
+    </div>
     <section id="changelog">
         <details open>
             <summary>Derniers changements</summary>
@@ -91,6 +92,7 @@
 
         </div>
     </section>
+    </div>
 @endsection
 
 @section('scripts')
@@ -98,7 +100,7 @@
         const nav = document.querySelector("nav.navbar");
         window.addEventListener('scroll', function () {
             "use strict";
-            if (window.scrollY >= 150) {
+            if (window.scrollY >= 100) {
                 nav.classList.add("bg-black");
                 nav.classList.remove("bg-transparent");
             } else {

@@ -1,8 +1,10 @@
 @import "main";
 header{
-    background: url(../img/visusitev11.jpg) no-repeat left 10% bottom;
+    background: url(../img/Bg-header.jpg) no-repeat left 10% center;
     background-size: cover;
     height: 100vh;
+    box-shadow: inset black 0 -40px 100px 0px;
+    
 }
 .bg-forest{
     background: url(../../public/img/forest.jpg) no-repeat;
@@ -10,7 +12,8 @@ header{
     box-shadow: inset 0px 0px 200px 150px #050e05, 0px -15px 150px 100px #050e05;
 }
 h1.title{
-    font-size: 7rem;
+    font-size: 1px;
+    color: rgba(3, 3, 3, 0.13);
     visibility: hidden;
     position: absolute;
     top: 0;
@@ -20,12 +23,31 @@ img.title{
     width: 100%;
     margin-bottom: 5rem;
 }
+// .scroll{
+//     width: 6px;
+//     height: 50px;
+//     border-radius: 3px;
+//     background: linear-gradient( #ffffff, rgb(146, 146, 122),#ffffff);
+//     background-size: 100% 400% ;
+//     box-shadow: inset 0 0 2px 1px rgba(228, 208, 95, 0.274), 0 0 8px 1px rgba(255, 238, 89, 0.521);
+//     animation: bg-pan-top 8s ease alternate infinite both ;
+// }
+
+@keyframes bg-pan-top {
+    0% {
+      background-position: 50% 100%;
+    }
+    100% {
+      background-position: 50% 0%;
+    }
+  }
+
 
 h2.title{
     font-size: 3rem;
 }
 .video-iframe{
-    box-shadow: rgba(75, 57, 29, 0.4) 0 0 100px 10px;
+    box-shadow: rgba(134, 126, 100, 0.2) 0 0 100px 10px;
 }
 
 @media screen and (max-width: 800px){

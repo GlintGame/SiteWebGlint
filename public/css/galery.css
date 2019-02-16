@@ -22,6 +22,7 @@ body {
 body {
   font-family: Rosario, sans-serif;
   background: black;
+  min-height: 100vh;
 }
 
 .title {
@@ -110,8 +111,14 @@ h1.title {
 
 .popup .close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 30px;
+  right: 30px;
+  background: white;
+  padding: 5px;
+  width: 32px;
+  border-radius: 5px;
+  height: 32px;
+  text-align: center;
 }
 
 nav.fixed-top {
