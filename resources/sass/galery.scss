@@ -16,7 +16,7 @@ h1.title{
     width: 100%;
 
     img{
-        width: 99%;
+        width: 80%;
     }
     
     .close{
@@ -69,6 +69,11 @@ nav{
     .deco::after{
         content: url(../../public/img/Deco-1.svg);
         width: 120px;
+    }
+    .popup{
+        img{
+            width: 100%;
+        }
     }
     
     .deco::before{

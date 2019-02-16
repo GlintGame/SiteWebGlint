@@ -23,15 +23,15 @@
                 <span class="subtitle">Version Beta {{ $version->name }}</span>
             </h1>
 
-            <a href="game_version/{{ $version->url }}/glint_win.zip" class="download" download>
+            <a href={{ URL::asset("game_versions/" . $version->url  . "/glint_win.zip") }} class="download" download>
                 <img src="{{ URL::asset('img/logos/windows.svg') }}" alt="">
                 Télécharger la version Windows
             </a>
-            <a href="game_version/{{ $version->url }}/glint_mac.zip" class="download" download>
+            <a href={{ URL::asset("game_versions/" . $version->url  . "/glint_mac.zip") }} class="download" download>
                 <img src="{{ URL::asset('img/logos/mac.svg') }}" alt="">
                 Télécharger la version Mac
             </a>
-            <a href="game_version/{{ $version->url }}/glint_lin.zip" class="download" download>
+            <a href={{ URL::asset("game_versions/" . $version->url  . "/glint_lin.zip") }} class="download" download>
                 <img src="{{ URL::asset('img/logos/linux.svg') }}" alt="">
                 Télécharger la version Linux
             </a>

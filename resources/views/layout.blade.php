@@ -6,12 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#111111">
+    <meta property="og:image" content="{{ URL::asset('images/Bg-header.jpg') }}">
+    <meta name="twitter:image" content=" {{ URL::asset('images/Bg-header.jpg') }}">
+    <meta name="Description" content="Dans un monde rongé par le mal, naît une flamme parmi les ombres. Son destin: le sauver de la malédiction.
+                Bienvenue sur le site de Glint, un jeu indépendant en développement depuis septembre 2018 créé par étudiants en MMI.">
     <link rel="icon" type="image/png" href="{{ URL::asset('img/Favicon.png') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
           crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Rosario" rel="stylesheet">
     <title>@yield('title')</title>
     @yield('head')
+    <script type="text/javascript">
+      var _paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//theolemoine.net/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
 </head>
 
 <body>
@@ -63,7 +80,7 @@
 
     </div>
     <div class="row">
-        <div class="col-12 text-light text-center bg-black"> Glint - Tous droit reserve</div>
+        <div class="col-12 text-light text-center copy"> Glint - Tous droits réservés</div>
     </div>
 </footer>
 

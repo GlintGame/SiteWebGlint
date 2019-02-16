@@ -8,9 +8,9 @@
 
 @section('content')
     <main class="container-fluid px-xl-5 mt-5">
-        <section class="row text-light my-3 mt-4 align-items-center">
-            <div class="col-md-6 col-12 my-4 order-md-2">
-                <h1 class="text-center mb-5 title deco">Galerie</h1>
+        <section class="row text-light my-4">
+            <div class="col-md-6 col-12 order-md-2">
+                <h1 class="text-center my-5 title deco">Galerie</h1>
                 <p class="mx-lg-5 mx-3 pt-xl-4">Voici la galerie, le développement des visuels et de l’environnement passe par une grande phase de recherche c’est pour cela que nous souhaitons partager avec vous. L’équipe Glint est fière de vous présenter les inspirations les premiers sketchs et quelque dessins supplémentaires :D
                 </p>
             </div>
@@ -27,7 +27,7 @@
                 <img src="{{ URL::asset('img/galery/speeddraw.jpg') }}" class="img-fluid" alt="">
             </div>
             <div class="col-sm-6 col-md-4 my-3 my-md-4">
-                <img src="{{ URL::asset('img/galery/marche.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ URL::asset('img/galery/Course.png') }}" class="img-fluid" alt="">
             </div>
             <div class="col-sm-6 col-md-4 my-3 my-md-4">
                 <img src="{{ URL::asset('img/galery/nightdesolationcoloroki.jpg') }}" class="img-fluid" alt="">

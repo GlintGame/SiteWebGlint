@@ -56,7 +56,11 @@ p {
 }
 
 .bg-black {
-  background-color: #141414;
+  background-color: black;
+}
+
+.copy {
+  margin-bottom: 5px;
 }
 
 nav {
@@ -106,7 +110,7 @@ h1.title {
 }
 
 .popup img {
-  width: 99%;
+  width: 80%;
 }
 
 .popup .close {
@@ -171,6 +175,10 @@ nav {
   .deco::after {
     content: url(/images/Deco-1.svg?b3c0a74ad48aacc8fd96e52490e0fbb3);
     width: 120px;
+  }
+
+  .popup img {
+    width: 100%;
   }
 
   .deco::before {
