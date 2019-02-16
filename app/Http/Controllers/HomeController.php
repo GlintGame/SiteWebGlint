@@ -45,14 +45,14 @@ class HomeController extends Controller
     {
         $version = Version::where('name', $versionName)->first();
 
-        $posts = Post::where('version_id', $version->id)
-                        ->orderBy('CREATED_AT', 'DESC')
-                        ->get();
-
         if($version == null)
         {
             return view('error', ['message' => 'Cette version du jeu n\'existe pas', 'background' => '404']);
         }
+
+        $posts = Post::where('version_id', $version->id)
+                        ->orderBy('CREATED_AT', 'DESC')
+                        ->get();
 
         return view('version', [
             'version' => $version,
